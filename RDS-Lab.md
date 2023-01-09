@@ -33,14 +33,14 @@ DB Instance
 1. Select the Subnet Group you created in the previous step. 
 1. For Security Group, remove the default security group. Add RDSsg.
 1. Under Additional Configuration, 
-For Initial database name, provide mydb.
-Uncheck Enable Performance Insights. 
-Uncheck Enable Enhanced Monitoring. 
-Uncheck Enable deletion protection. 
+* For Initial database name, provide mydb.
+* Uncheck Enable Performance Insights. 
+* Uncheck Enable Enhanced Monitoring. 
+* Uncheck Enable deletion protection. 
 1. Click on the Create Database button at the bottom. 
 
 
 **Test the Database Connectivity**
-Once RDS is ready, connect it via the Public instance you had launched earlier.
-Start the Public EC2 Instance and Connect to it. 
-Execute the following:
+1. Once RDS is ready, connect it via the Public instance you had launched earlier.
+1. Start the Public EC2 Instance and Connect to it. 
+1. Execute the following:
