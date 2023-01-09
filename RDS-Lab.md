@@ -6,6 +6,7 @@ This is an overview of the RDS lab that we will be doing:
 And here are the steps to follow for the lab:
 
 **Subnet Group**
+<br/>
 AWS gets to know the subnets in which the 2 RDS nodes should be launched (via Subnet Group). 
 1. Under Search for services, type in and then click RDS.
 1. In the left-hand RDS Dashboard navigation menu, click Subnet Groups.
