@@ -37,10 +37,25 @@ DB Instance
 * Uncheck Enable Performance Insights. 
 * Uncheck Enable Enhanced Monitoring. 
 * Uncheck Enable deletion protection. 
-1. Click on the Create Database button at the bottom. 
+14. Click on the Create Database button at the bottom. 
 
 
 **Test the Database Connectivity**
 1. Once RDS is ready, connect it via the Public instance you had launched earlier.
 1. Start the Public EC2 Instance and Connect to it. 
 1. Execute the following:
+
+`sudo yum upgrade -y
+sudo amazon-linux-extras install postgresql10 -y
+mkdir rds-lab
+cd rds-lab
+wget https://usaa-aws-resources.s3.amazonaws.com/rds-lab/database.ini
+wget https://usaa-aws-resources.s3.amazonaws.com/rds-lab/query_postgres.py
+wget https://usaa-aws-resources.s3.amazonaws.com/rds-lab/requirements.txt 
+wget https://usaa-aws-resources.s3.amazonaws.com/rds-lab/db_config.py 
+pip3 install boto3 
+pip3 install --upgrade -r requirements.txt`
+
+
+
+
