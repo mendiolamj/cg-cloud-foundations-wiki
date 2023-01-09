@@ -18,6 +18,7 @@ AWS gets to know the subnets in which the 2 RDS nodes should be launched (via Su
 1. Click on the Create button. 
 
 **DB Security Group**
+<br/>
 This security group protects the traffic coming to the RDS instance.
 1. Navigate to EC2 Dashboard > Security Groups. 
 1. Create a new Security Group for your RDS.
