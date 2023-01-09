@@ -1,5 +1,6 @@
 
 This is an overview of the RDS lab that we will be doing:
+
 <img width="576" alt="Screen Shot 2023-01-09 at 12 45 10 AM" src="https://user-images.githubusercontent.com/25653204/211247227-7a4b1d47-8506-4343-be4e-6e07fae88153.png">
 
 And here are the steps to follow for the lab:
@@ -84,7 +85,22 @@ select * from film;
 python3 ./query_postgres.py --instance master 
 7. You should see the data from the table as part of the above python code execution. This part is completed now. 
 
+**Test the Multi-AZ instance Failover**
+
+1. Check the private IP of the RDS instance serving you. Make a note of it. 
+```console
+ping -a <rds hostname>
+```
+2. Now, reboot the RDS and choose Reboot with Failover option. Wait for DB to be available again. Check the private IP again and make a note of it. 
+```console
+ping -a <rds hostname>
+```
+3. Go ahead and check these IPs in the EC2 dashboard > Network Interfaces. 
+4. Stop the EC2 instance now. 
+5. Delete the RDS instance & Subnet Group now. 
 
 
+
+<img width="603" alt="Screen Shot 2023-01-09 at 12 52 32 AM" src="https://user-images.githubusercontent.com/25653204/211247851-41e773df-88e3-49da-abed-e939ad12a32c.png">
 
 
