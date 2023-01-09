@@ -25,9 +25,10 @@ wget https://usaa-aws-resources.s3.amazonaws.com/dynamodb-lab/bulk_load_table.py
 
 ```
 
-
 7. Use python code from your EC2 instance to:
+<br/>
 a. Create DynamoDB table
+<br/>
 b. Insert data into this table. Execute following: 
 
 ```console
