@@ -58,6 +58,21 @@ pip3 install boto3
 pip3 install --upgrade -r requirements.txt
 ```
 
+4. Now connect to RDS and create a table and insert data into it. Find the hostname from RDS details. Look for the Endpoint value.  You need to remove the square brackets in the following command:
+
+```console
+psql -h [HOSTNAME] -p [PORT] -U [USERNAME] -W -d [DATABASENAME]
+
+create table film (title varchar(100) primary key, genre varchar (50), release_year varchar (5));
+
+insert into film (title, genre, release_year) values ('matrix 1', 'scifi', 1998), ('matrix 2', 'thriller', 2002);
+
+select * from film;
+
+#Exit from psql 
+\q
+```
+
 
 
 
