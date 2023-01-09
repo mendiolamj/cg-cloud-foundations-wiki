@@ -45,7 +45,8 @@ DB Instance
 1. Start the Public EC2 Instance and Connect to it. 
 1. Execute the following:
 
-`sudo yum upgrade -y
+```console
+sudo yum upgrade -y
 sudo amazon-linux-extras install postgresql10 -y
 mkdir rds-lab
 cd rds-lab
@@ -54,7 +55,8 @@ wget https://usaa-aws-resources.s3.amazonaws.com/rds-lab/query_postgres.py
 wget https://usaa-aws-resources.s3.amazonaws.com/rds-lab/requirements.txt 
 wget https://usaa-aws-resources.s3.amazonaws.com/rds-lab/db_config.py 
 pip3 install boto3 
-pip3 install --upgrade -r requirements.txt`
+pip3 install --upgrade -r requirements.txt
+```
 
 
 
