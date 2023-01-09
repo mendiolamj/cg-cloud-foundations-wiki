@@ -95,7 +95,5 @@ Afterwards, create a variables.tf file and a test.tfvars file.
 You should specify the VPC CIDR and all the subnet CIDRs using these variable files. At last, execute it by passing the CIDR values from the test.tfvars file. 
 
 Execute terraform destroy and delete the resources.
----------------------------------------------------------------------------------
-
 
 
