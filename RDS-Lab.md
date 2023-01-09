@@ -1,4 +1,10 @@
-Subnet Group
+
+This is an overview of the RDS lab that we will be doing:
+<img width="576" alt="Screen Shot 2023-01-09 at 12 45 10 AM" src="https://user-images.githubusercontent.com/25653204/211247227-7a4b1d47-8506-4343-be4e-6e07fae88153.png">
+
+And here are the steps to follow for the lab:
+
+**Subnet Group**
 AWS gets to know the subnets in which the 2 RDS nodes should be launched (via Subnet Group). 
 1. Under Search for services, type in and then click RDS.
 1. In the left-hand RDS Dashboard navigation menu, click Subnet Groups.
@@ -9,7 +15,7 @@ AWS gets to know the subnets in which the 2 RDS nodes should be launched (via Su
 1. Select both the Private Subnets of your VPC in the section below. 
 1. Click on the Create button. 
 
-DB Security Group
+**DB Security Group**
 This security group protects the traffic coming to the RDS instance.
 1. Navigate to EC2 Dashboard > Security Groups. 
 1. Create a new Security Group for your RDS.
@@ -19,7 +25,7 @@ This security group protects the traffic coming to the RDS instance.
 1. Specify Port as 5432 and source as the Security Group ID of your Public EC2 Instance. You can find this by opening a new tab for EC2 instances.
 1. Click on the Create button. 
 
-DB Instance
+**DB Instance**
 1. In the left-hand RDS Dashboard navigation menu, click Databases.
 1. Click on the Create Database button. 
 1. Choose the Standard create radio-button.
@@ -72,6 +78,12 @@ select * from film;
 #Exit from psql 
 \q
 ```
+
+5. Update database.ini to show the info of your RDS. You can use vi editor. You will have to edit the hostname & password (provided you followed the instructions above). 
+6. Execute the following to connect to RDS via python code. 
+python3 ./query_postgres.py --instance master 
+7. You should see the data from the table as part of the above python code execution. This part is completed now. 
+
 
 
 
