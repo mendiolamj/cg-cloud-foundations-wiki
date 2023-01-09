@@ -49,3 +49,53 @@ terraform validate
 
 terraform apply
 ```
+
+7. Verify the created resource in the AWS management console. 
+8. Now destroy this resource. Execute:
+
+```console
+terraform destroy
+rm main.tf
+```
+
+---------------------------------------------
+
+**Variables Testing**
+
+Delete the older main.tf file. 
+
+Download these files: 
+
+
+```console
+wget https://usaa-aws-resources.s3.amazonaws.com/tf-lab/02+-+with+input+%26+output+file/variables.tf
+
+wget https://usaa-aws-resources.s3.amazonaws.com/tf-lab/02+-+with+input+%26+output+file/main.tf
+
+wget https://usaa-aws-resources.s3.amazonaws.com/tf-lab/02+-+with+input+%26+output+file/outputs.tf
+
+wget https://usaa-aws-resources.s3.amazonaws.com/tf-lab/03+-+with+tfvars/testing.tfvars 
+```
+
+Execute: 
+```console
+terraform apply -var-file="testing.tfvars"
+```
+------------------------------------------------------------------------------
+Delete all the files from the tf-lab folder and then download this file. 
+
+```console
+wget https://usaa-aws-resources.s3.amazonaws.com/tf-lab/vpc/main.tf 
+```
+
+Execute this once and create the VPC. Then, destroy it. 
+
+Afterwards, create a variables.tf file and a test.tfvars file. 
+
+You should specify the VPC CIDR and all the subnet CIDRs using these variable files. At last, execute it by passing the CIDR values from the test.tfvars file. 
+
+Execute terraform destroy and delete the resources.
+---------------------------------------------------------------------------------
+
+
+
