@@ -24,3 +24,20 @@ wget https://usaa-aws-resources.s3.amazonaws.com/dynamodb-lab/items.json
 wget https://usaa-aws-resources.s3.amazonaws.com/dynamodb-lab/bulk_load_table.py
 
 ```
+
+
+7. Use python code from your EC2 instance to:
+a. Create DynamoDB table
+b. Insert data into this table. Execute following: 
+
+```console
+python3 ./create_table.py 
+
+python3 ./bulk_load_table.py 
+```
+
+Verify the inserted data from Management Console (DynamoDB Dashboard > Tables). Select the “battle-royale” table and click on the View Items button.
+
+Delete the DynamoDB table and the IAM role. Also, detach the IAM role from the EC2 instance.
+
+
