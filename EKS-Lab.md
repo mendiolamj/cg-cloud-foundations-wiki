@@ -3,12 +3,12 @@ Overview of the lab:
 <img width="583" alt="Screen Shot 2023-01-09 at 2 36 15 AM" src="https://user-images.githubusercontent.com/25653204/211259615-7712e681-fa84-4198-90ff-a8a124c980a6.png">
 
 
-Important parts of this lab are: 
-Creating the EKS cluster in the existing VPC. 
-Creation of Fargate Profiles.
-Creation of Service Account to interact with AWS services.
-Launching a pod in the correct Fargate profile. 
-Connecting to an AWS service from the pod. 
+* Important parts of this lab are: 
+* Creating the EKS cluster in the existing VPC. 
+* Creation of Fargate Profiles.
+* Creation of Service Account to interact with AWS services.
+* Launching a pod in the correct Fargate profile. 
+* Connecting to an AWS service from the pod. 
 
 Here are the steps to take:
 
