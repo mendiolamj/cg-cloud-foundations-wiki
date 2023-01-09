@@ -1,23 +1,23 @@
 Subnet Group
 AWS gets to know the subnets in which the 2 RDS nodes should be launched (via Subnet Group). 
-Under Search for services, type in and then click RDS.
-In the left-hand RDS Dashboard navigation menu, click Subnet Groups.
-Delete the Subnet Groups (if there are any). 
-Click on the Create DB Subnet Group button. 
-Give the name myRDSSubnetGroup. Provide a description.
-For VPC, choose MyProdVPC.
-Select both the Private Subnets of your VPC in the section below. 
-Click on the Create button. 
+1. Under Search for services, type in and then click RDS.
+1. In the left-hand RDS Dashboard navigation menu, click Subnet Groups.
+1. Delete the Subnet Groups (if there are any). 
+1. Click on the Create DB Subnet Group button. 
+1. Give the name myRDSSubnetGroup. Provide a description.
+1. For VPC, choose MyProdVPC.
+1. Select both the Private Subnets of your VPC in the section below. 
+1. Click on the Create button. 
 
 DB Security Group
 This security group protects the traffic coming to the RDS instance.
-Navigate to EC2 Dashboard > Security Groups. 
-Create a new Security Group for your RDS.
-Give the name as RDSsg.
-Choose the VPC as your myProdVPC. 
-In the Inbound Rules, 
-Specify Port as 5432 and source as the Security Group ID of your Public EC2 Instance. You can find this by opening a new tab for EC2 instances.
-Click on the Create button. 
+1. Navigate to EC2 Dashboard > Security Groups. 
+1. Create a new Security Group for your RDS.
+1. Give the name as RDSsg.
+1. Choose the VPC as your myProdVPC. 
+1. In the Inbound Rules, 
+1. Specify Port as 5432 and source as the Security Group ID of your Public EC2 Instance. You can find this by opening a new tab for EC2 instances.
+1. Click on the Create button. 
 
 DB Instance
 In the left-hand RDS Dashboard navigation menu, click Databases.
