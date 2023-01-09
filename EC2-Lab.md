@@ -1,6 +1,8 @@
-Here's a high level summary of what we want to accomplish with this lab:
+_Here's a high level summary of what we want to accomplish with this lab:_
 
 <img width="579" alt="Screen Shot 2023-01-08 at 11 21 15 PM" src="https://user-images.githubusercontent.com/25653204/211240643-e63c48ff-565e-470d-8259-c53e6b95aec1.png">
+
+_Here are the steps to follow to complete the lab: _
 
 1. Under Search for services, type in and then click EC2.
 1. In the left-hand EC2 Dashboard navigation menu, click Instances.
