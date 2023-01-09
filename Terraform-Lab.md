@@ -18,3 +18,34 @@ Specify the Access Key ID & Secret Access Key from the file you have.
 Specify us-east-1 for region.
 Specify json for output format. 
 ```
+6. Do the necessary setup on the Public EC2 instance to run Terraform code. Execute the following: 
+
+```console
+aws sts get-caller-identity
+
+sudo yum install -y yum-utils
+
+sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
+
+sudo yum -y install terraform
+
+terraform -help
+
+terraform -install-autocomplete
+
+source ~/.bashrc
+
+mkdir tf-lab
+
+cd tf-lab
+
+wget https://usaa-aws-resources.s3.amazonaws.com/tf-lab/main.tf 
+
+ls 
+
+terraform init
+
+terraform validate
+
+terraform apply
+```
