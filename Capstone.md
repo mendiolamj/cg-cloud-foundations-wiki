@@ -18,9 +18,9 @@
  
 * The first thing you will need to do is containerize the application by using a Dockerfile and perhaps use Docker compose as well
 
-* Then, setup CI/CD with Codebuild + Codepipeline - upload the image to ECR, and set it up such that every time you update the github repository the Docker image is rebuilt
+* Then, setup CI/CD with Codebuild + Codepipeline - upload the image to ECR, and set it up such that every time you update the github repository the Docker image is rebuilt and redeployed.
 
-* Of course, you will need to deploy our container to an orchestrator - we will use Fargate + EKS.  Set that up as well!
+* Redeployed where though?  Good question -  you will need to deploy your container to an orchestrator - you will use Fargate + EKS.  Set that up as well!
 
-* Finally you will utilize Terraform to manage our infrastructure.  For high availability and disaster recovery, we will deploy our application to 2 regions.  We will also want our S3 buckets to live in 2 different regions as well.  
+* Finally you will utilize Terraform to manage our infrastructure.  For high availability and disaster recovery, you will deploy our application to 2 regions.  We will also want our S3 buckets to live in 2 different regions as well.  
 
