@@ -9,9 +9,8 @@
 
 
 * The flow will look like something like this:
+<img width="773" alt="Screen Shot 2023-01-20 at 12 04 34 PM" src="https://user-images.githubusercontent.com/25653204/213760116-406c4617-8b29-429d-a6d7-65e8ec7df110.png">
 
-
-<img width="775" alt="Screen Shot 2023-01-20 at 11 57 41 AM" src="https://user-images.githubusercontent.com/25653204/213757815-b812c1a5-a91c-47bc-bf93-c69c9fbcee7d.png">
 
 
 * We will load the initial todos that get displayed in the application by hitting an API which utilizes a Lambda that will then retrieve the initial todos from an S3 bucket (which you populate)
