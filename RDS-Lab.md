@@ -127,13 +127,13 @@ In order to connect to the DB Instance and access your MYSQL Database - follow t
 
 _Before you terminate an instance, verify that you won't lose any data by checking that your Amazon EBS volumes won't be deleted on termination and that you've copied any data that you need from your instance store volumes to persistent storage, such as Amazon EBS or Amazon S3._
 
-`Open the Amazon EC2 console at https://console.aws.amazon.com/ec2/.`
+> Open the Amazon EC2 console at https://console.aws.amazon.com/ec2/.
 
-`In the navigation pane, choose Instances.`
+> In the navigation pane, choose Instances.
 
-`Select the instance, and choose Instance state, Terminate instance.`
+> Select the instance, and choose Instance state, Terminate instance.
 
-`Choose Terminate when prompted for confirmation.`
+> Choose Terminate when prompted for confirmation.
 
 
 
