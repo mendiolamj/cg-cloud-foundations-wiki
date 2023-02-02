@@ -17,18 +17,24 @@ cd dynamo-lab
 aws sts get-caller-identity 
 
 wget https://usaa-aws-resources.s3.amazonaws.com/dynamodb-lab/create_table.py
+Change the name of the table to something unique and the region to us-west-2
 
 wget https://usaa-aws-resources.s3.amazonaws.com/dynamodb-lab/items.json
 
 wget https://usaa-aws-resources.s3.amazonaws.com/dynamodb-lab/bulk_load_table.py
+Change the name of the table to something unique and the region to us-west-2
 
 ```
+
+
+make sure to Install `pip3 install boto3`
 
 7. Use python code from your EC2 instance to:
 <br/>
 a. Create DynamoDB table
 <br/>
 b. Insert data into this table. Execute following: 
+
 
 ```console
 python3 ./create_table.py 
