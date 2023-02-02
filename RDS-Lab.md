@@ -116,3 +116,28 @@ In order to connect to the DB Instance and access your MYSQL Database - follow t
 `SELECT * FROM employee_table;  `
 
 9. Type **exit** to close the SQL command line. 
+
+10. Once you have tested the SQL command, close all the terminals on the EC2 machine. 
+
+11. Delete the EC2 machine - 
+
+_Before you terminate an instance, verify that you won't lose any data by checking that your Amazon EBS volumes won't be deleted on termination and that you've copied any data that you need from your instance store volumes to persistent storage, such as Amazon EBS or Amazon S3._
+
+`Open the Amazon EC2 console at https://console.aws.amazon.com/ec2/.`
+
+`In the navigation pane, choose Instances.`
+
+`Select the instance, and choose Instance state, Terminate instance.`
+
+`Choose Terminate when prompted for confirmation.`
+
+
+
+**### Delete the DB Instance**
+
+_You can easily delete the MySQL DB Instance from the Amazon RDS console. It is a best practice to delete instances that you are no longer using so that you don’t keep getting charged for them._
+
+1. Go back to your Amazon RDS Console. Select **Databases**, choose the instance that you want to delete, and then select **Delete** from the **Actions** dropdown menu.
+2. You are asked to create a final snapshot and to confirm the deletion. For our example, do not create a final snapshot, acknowledge that you want to delete the instance, and then click **Delete.** 
+
+_Note: Deleting your DB Instance may take a few minutes_
