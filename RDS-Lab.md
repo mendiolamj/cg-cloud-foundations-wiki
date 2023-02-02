@@ -5,7 +5,8 @@ You will learn how to create an environment to run your MySQL database (we call 
 
 When you [click here](https://console.aws.amazon.com/console/home?region=us-east-1), the AWS management console will open in a new browser window, so you can keep this step-by-step guide open. When this screen loads, find RDS under Database and click to open the Amazon RDS Console.
 
-**Steps to Create a MySQL Database instance**:
+###  **Steps to Create a MySQL Database instance**:
+
 _In this step, we will use Amazon RDS to create a MySQL DB Instance with db.t2.micro DB instance class, 20 GB of storage, and automated backups enabled with a retention period of one day. As a reminder, all of this is free tier eligible._
 
 1. In the top right corner of the Amazon RDS console, select the Region in which you want to create the DB instance. (Eg: us-west-2.
