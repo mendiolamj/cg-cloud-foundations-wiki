@@ -8,7 +8,6 @@ Here are the actual steps for the lab:
 1. Create a new IAM role. Name it DDRole. 
 1. It should be assumed by EC2. 
 1. Allocate it AmazonDynamoDBFullAccess policy.
-1. Also, select DND_permission_boundary as the Permissions Boundary.
 1. Allocate this IAM role to your Public EC2 instance. For this, select your public EC2 instance. Go to Actions > Security > Modify IAM Role. 
 1. Connect to the Public Instance and execute the following:
 
