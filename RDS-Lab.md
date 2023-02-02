@@ -83,11 +83,15 @@ In order to connect to the DB Instance and access your MYSQL Database - follow t
 4. Now, install MySQL client on Amazon Linux 2 using this syntax- `yum install mysql`
 5. Check installed MySQL/MariaDB version using this syntax– `mysql --version`
 6. Type in the following syntax to access your database:
+
 `$ mysql -h {hostname} -P 3306 -u username -p {databasename}`
+
 `Password: {your password}`
-`hostname: the name of the MySQL server that you are assigned to, for example, mysql4.safesecureweb.com`
-`databasename: the name of your MySQL database`
-`password: the password you use to access your MySQL database`
+
+> hostname: the name of the MySQL server that you are assigned to, for example, mysql4.safesecureweb.com
+> databasename: the name of your MySQL database
+> password: the password you use to access your MySQL database
+
 7. On successful connection the terminal opens to MySQL Command Line. 
 8. Run some MySQL queries as mentioned below:
 
