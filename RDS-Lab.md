@@ -1,7 +1,7 @@
 
 This is an overview of the RDS lab that we will be doing:
 
-You will learn how to create an environment to run your MySQL database (we call this environment an instance), connect to the database, and delete the DB instance.  We will do this using [Amazon Relational Database Service (Amazon RDS)](https://aws.amazon.com/rds/mysql/) and everything done in this lab is [Free Tier](https://aws.amazon.com/free/) eligible.
+You will learn how to create an environment to run your MySQL database (we call this environment an instance), connect to the database, run some SQL queries and delete the DB instance.  We will do this using [Amazon Relational Database Service (Amazon RDS)](https://aws.amazon.com/rds/mysql/) and everything done in this lab is [Free Tier](https://aws.amazon.com/free/) eligible.
 
 When you [click here](https://console.aws.amazon.com/console/home?region=us-east-1), the AWS management console will open in a new browser window, so you can keep this step-by-step guide open. When this screen loads, find RDS under Database and click to open the Amazon RDS Console.
 
