@@ -23,6 +23,8 @@ _Hold on for some time and let minikube do its job._
 
 > To check the status of your Cluster use syntax - `minikube status` 
 
+> To check the ip address of the minikube - `minikube ip`
+
 ### Managing your Cluster at any given point in time
 
 > To pause Kubernetes without impacting deployed applications use syntax - `minikube pause`
