@@ -25,7 +25,7 @@ _Hold on for some time and let minikube do its job._
 
 ### Understanding kubectl
 
-Once your minikube cluster is up, you can start interacting with it using kubectl. One simple way of using kubectl is to get used to the command format. We've simplified this for you - 
+> _Once your minikube cluster is up, you can start interacting with it using kubectl. kubectl actually gets installed as a dependency when we install minikube - which you can see while installing dependencies for miniKube- "kubernetes cli" is actually kubectl. One simple way of using kubectl is to get used to the command format. We've simplified this for you - _
 
 **`kubectl <what action do you want to do> <on which resource> -n <your namespace> <other options> <name of the resource>`**
 
