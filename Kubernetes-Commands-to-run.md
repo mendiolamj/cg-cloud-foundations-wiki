@@ -1,3 +1,6 @@
+To Install Minikube refer - https://minikube.sigs.k8s.io/docs/start/ 
+( For now, this is all ready installed on your VM ) 
+
 List of commands we will be using for the class - 
 
 ### Open a terminal on your VM and run the following commands:
