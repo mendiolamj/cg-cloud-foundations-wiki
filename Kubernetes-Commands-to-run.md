@@ -21,7 +21,18 @@ _Hold on for some time and let minikube do its job._
 
 ### Status of your Cluster 
 
-> To check the status of your Cluster use syntax - `minikube status`
+> To check the status of your Cluster use syntax - `minikube status` 
+
+### Managing your Cluster at any given point in time
+
+> To pause Kubernetes without impacting deployed applications use syntax - `minikube pause`
+
+> To Unpause a paused instance use syntax - `minikube unpause`
+
+> To Halt the cluster use syntax - `minikube stop` 
+
+> To Delete all of the minikube clusters use syantax `minikube delete --all`
+
 
 ### Understanding kubectl
 
@@ -38,17 +49,36 @@ Namespaces provides a mechanism for isolating groups of resources within a singl
 
 > To list the current namespaces in a cluster using `kubectl get namespace`
 
-> To get pods across all namespaces use syntax - `kubectl get pods -A`
+> To get pods across all the components use syntax - `kubectl get all`
 
-### Managing your Cluster 
+> To get all nodes in the cluster use syntax - `kubectl get node`
 
-> To pause Kubernetes without impacting deployed applications use syntax - `minikube pause`
+### Create a Pod 
 
-> To Unpause a paused instance use syntax - `minikube unpause`
+The following is an example of a Pod which consists of a container running the image nginx:1.14.2 
 
-> To Halt the cluster use syntax - `minikube stop` 
+1. Open your terminal and create a directory using the syntax `mkdir testpod`
+1. Get inside the directory using the syntax `cd testpod`
+1. Create a configuration file using the syntax `touch simple-pod.yaml`
+1. Open the file using an text editor - For example use `vi simple-pod.yaml`
+1. Add the following set of instructions 
 
-> To Delete all of the minikube clusters use syantax `minikube delete --all`
+> apiVersion: v1
+> kind: Pod
+> metadata:
+>   name: nginx
+> spec:
+>   containers:
+>   - name: nginx
+>     image: nginx:1.14.2
+>     ports:
+>     - containerPort: 80
+
+
+
+
+
+
 
 
 
