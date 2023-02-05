@@ -12,4 +12,5 @@ List of commands we will be using for the class -
 
 ### Start your Cluster
 
-> Simply start a new cluster by using the syntax - `minikube start` command. Hold on for some time and let minikube do its job.
+> Simply start a new cluster by using the syntax - `minikube start` command. 
+_Hold on for some time and let minikube do its job._
