@@ -63,16 +63,18 @@ The following is an example of a Pod which consists of a container running the i
 1. Open the file using an text editor - For example use `vi simple-pod.yaml`
 1. Add the following set of instructions 
 
-> apiVersion: v1
-> kind: Pod
-> metadata:
->   name: nginx
-> spec:
->   containers:
->   - name: nginx
->     image: nginx:1.14.2
->     ports:
->     - containerPort: 80
+
+***
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+spec:
+  containers:
+  - name: nginx
+    image: nginx:1.14.2
+    ports:
+    - containerPort: 80
 
 
 
