@@ -22,4 +22,20 @@ Once your minikube cluster is up, you can start interacting with it using kubect
 
 **`kubectl <what action do you want to do> <on which resource> -n <your namespace> <other options> <name of the resource>`**
 
+### kubectl Namespace
+ 
+Namespaces provides a mechanism for isolating groups of resources within a single cluster. If you don't provide a namespace, kubectl will directly use the "default" namespace for you.
+
+> To create a namespace use syntax - `kubectl create namespace my-namespace`
+
+> To list the current namespaces in a cluster using `kubectl get namespace`
+
+> To get pods across all namespaces use syntax - `kubectl get pods -A`
+
+
+
+
+
+
+
 
