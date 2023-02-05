@@ -16,13 +16,11 @@ _Image Source: https://kubernetes.io/docs/tutorials/kubernetes-basics/create-clu
 
 _Image Source: https://kubernetes.io/docs/tutorials/kubernetes-basics/explore/explore-intro/_ 
 
-
 ## Pod Overview -
 
 ![](https://d33wubrfki0l68.cloudfront.net/fe03f68d8ede9815184852ca2a4fd30325e5d15a/98064/docs/tutorials/kubernetes-basics/public/images/module_03_pods.svg) 
 
 _Image Source - https://kubernetes.io/docs/tutorials/kubernetes-basics/explore/explore-intro/_
-
 
 ![](https://i0.wp.com/goglides.io/wp-content/uploads/2020/06/kubernetes-pod-architecture.png?fit=1546%2C1032&ssl=1) 
 
