@@ -53,26 +53,61 @@ Namespaces provides a mechanism for isolating groups of resources within a singl
 
 > To get all nodes in the cluster use syntax - `kubectl get node`
 
+> To create a pod use syntax - `kubectl run pod-name --image image_name:tag`
+
+_For example using the nginx image, run the command `kubectl run nginx --image=nginx --restart=Never`. This will create a pod named nginx, running with the nginx image on Docker Hub. And by setting the flag --restart=Neverwe tell Kubernetes to create a single pod rather than a Deployment._
+
+> To see the status of your pod use syntax `kubectl get pods` 
+
+> To view the entire configuration of the pod, just run `kubectl describe pod nginx` 
+
+> To delete the pod you have created, just run `kubectl delete pod nginx`
+
 ### Create a Pod 
 
-The following is an example of a Pod which consists of a container running the image nginx:1.14.2 
+The following is an example of a Pod which consists of a container running the image nginx:1.17.0 
 
-1. Open your terminal and create a directory using the syntax `mkdir testpod`
-1. Get inside the directory using the syntax `cd testpod`
-1. Create a configuration file using the syntax `touch simple-pod.yaml`
-1. Open the file using an text editor - For example use `vi simple-pod.yaml`
-1. Add the following set of instructions 
+* Open your terminal and create a directory using the syntax `mkdir testpod`
+* Get inside the directory using the syntax `cd testpod`
+* Create a configuration file using the syntax `touch sample-pod.yaml`
+* Open the file using an text editor - For example use `vi sample-pod.yaml`
+* Add the following set of instructions 
 
-`apiVersion: v1`
-`kind: Pod`
-`metadata:`
-  `name: nginx`
-`spec:`
-  `containers:`
-  `- name: nginx`
-    `image: nginx:1.14.2`
-    `ports:`
-    `- containerPort: 80`
+```
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+spec:
+  containers:
+  - name: nginx
+    image: nginx:1.17.0
+    ports:
+    - containerPort: 80
+```
+* Run the command `kubectl apply -f sample-pod.yaml`
+* To check the pod creation - use syntax `kubectl get all` or `kubectl get pods` 
+* To get more details about the pod using the name - use syntax ` kubectl describe pod/nginx`
+* To launch the shell inside our pod use syntax - `kubectl exec -it nginx -- /bin/bash`
+* Once inside the pod, try running `curl http://localhost`
+* But, it will complain that curl is not found.
+* So, we can use apt – advanced package tool – which is used to install/remove software on various Linux distros
+* Now, do `apt-get update`
+* Then, run `apt-get install curl` [ say yes 'y' for any prompt that comes up ]
+* Finally, try to `curl localhost` again
+* You should get a response this time w/ the nginx default html!
+* Type “exit” to leave the shell
+* To delete the pod use syntax - `kubectl delete pod/nginx`
+
+
+
+
+
+
+
+
+
+
 
 
 
