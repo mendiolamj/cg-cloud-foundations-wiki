@@ -20,6 +20,6 @@ _Hold on for some time and let minikube do its job._
 
 Once your minikube cluster is up, you can start interacting with it using kubectl. One simple way of using kubectl is to get used to the command format. We've simplified this for you - 
 
-> kubectl <what action do you want to do> <on which resource> -n <your namespace> <other options> <name of the resource>
+`**kubectl <what action do you want to do> <on which resource> -n <your namespace> <other options> <name of the resource>**`
 
 
