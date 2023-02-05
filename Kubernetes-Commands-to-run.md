@@ -15,9 +15,13 @@
 
 ### Start your Cluster
 
-> Simply start a new cluster by using the syntax - `minikube start` command. 
+> Simply start a new cluster using the docker driver by using the syntax - `minikube start --driver=docker` command. 
 
 _Hold on for some time and let minikube do its job._ 
+
+### Status of your Cluster 
+
+> To check the status of your Cluster use syntax - `minikube status`
 
 ### Understanding kubectl
 
