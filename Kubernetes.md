@@ -23,4 +23,4 @@ _Image Source - https://kubernetes.io/docs/tutorials/kubernetes-basics/explore/e
 
 ![](https://i0.wp.com/goglides.io/wp-content/uploads/2020/06/kubernetes-pod-architecture.png?fit=1546%2C1032&ssl=1) 
 
-_Image Source https://i0.wp.com/goglides.io/wp-content/uploads/2020/06/kubernetes-pod-architecture.png?fit=1546%2C1032&ssl=1_
+_Image Source https://i0.wp.com/goglides.io/wp-content/uploads/2020/06/kubernetes-pod-architecture.png?fit=1546%2C1032&ssl=1_ 
