@@ -2,8 +2,8 @@
 
 The following is an example of a Pod which consists of a container running the image nginx:1.17.0 
 
-* Open your terminal and create a directory using the syntax `mkdir testpod`
-* Get inside the directory using the syntax `cd testpod`
+* Open your terminal and create a directory using the syntax `mkdir k8s`
+* Get inside the directory using the syntax `cd k8s`
 * Create a configuration file using the syntax `touch sample-pod.yaml`
 * Open the file using an text editor - For example use `vi sample-pod.yaml`
 * Add the following set of instructions 
