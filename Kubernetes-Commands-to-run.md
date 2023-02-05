@@ -77,13 +77,13 @@ The following is an example of a Pod which consists of a container running the i
 apiVersion: v1
 kind: Pod
 metadata:
-  name: nginx
+  name: my-nginx-pod
+  labels:
+    app: nginx
 spec:
   containers:
-  - name: nginx
+  - name: nginx-container
     image: nginx:1.17.0
-    ports:
-    - containerPort: 80
 ```
 * Run the command `kubectl apply -f sample-pod.yaml`
 * To check the pod creation - use syntax `kubectl get all` or `kubectl get pods` 
