@@ -23,7 +23,7 @@ spec:
 * Run the command `kubectl apply -f sample-pod.yaml`
 * To check the pod creation - use syntax `kubectl get all` or `kubectl get pods` 
 * To get more details about the pod using the name - use syntax ` kubectl describe my-nginx-pod`
-* To launch the shell inside our pod use syntax - `kubectl exec -it nginx -- /bin/bash`
+* To launch the shell inside our pod use syntax - `kubectl exec -it my-nginx-pod -- /bin/bash`
 * Once inside the pod, try running `curl http://localhost`
 * But, it will complain that curl is not found.
 * So, we can use apt – advanced package tool – which is used to install/remove software on various Linux distros
