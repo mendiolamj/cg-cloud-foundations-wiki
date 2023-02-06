@@ -73,9 +73,9 @@ Events: ## Shows the Deployment activities since it was created.
 * **A Deployment can be updated to use a new image in two ways** - 
 
 ### Method 1 
+***
 You can pass the new image tag directly to the Deployment using flags with the kubectl command-line tool. We will change the nginx in our manifest file to use the nginx:1.18.0 version. 
 
-***
 `kubectl --record deployment.apps/my-deployment set image deployment.v1.apps/my-deployment my-deployment-container=nginx:1.18.0`
 
 OR
