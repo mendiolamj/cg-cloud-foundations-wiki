@@ -36,11 +36,16 @@ spec:
 * Check the status of the Pod `kubectl get Pods`
 * You can see that the number of Replica and the running instance of a Pod are the same as the number specified in the manifest file replicas field.
 * An application can also be scaled up or down using the command line which is the second method.
+
 > `kubectl scale - -replicas=5 -f replicaset-app.yaml `  ## Scale up
+
 > `kubectl scale - -replicas=1 -f replicaset-app.yaml`  ## Scale down
 OR
+
 > `kubectl scale - -replicas= 5 replicaset <replicaset name>`   ## Scale up
+
 > `kubectl scale - -replicas= 1 replicaset <replicaset name> `  ## Scale down
+
 * Kubernetes ReplicaSet can automate application lifecycle management for efficiency
 
 
