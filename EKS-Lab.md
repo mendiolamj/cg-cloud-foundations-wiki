@@ -13,10 +13,9 @@ Important parts of this lab are:
 
 Here are the steps to take:
 
-1. Generate Access Keys for IAM user CloudLearner (if not done already). 
+1. Generate Access Keys for IAM user (use your AWS username for eg:participant-lab-01)  (if not done already). 
 1. Connect to your Public Instance and execute “aws configure”
-1. Run “aws sts get-caller-identity” and verify that you are using IAM user CloudLearner.
-1. Execute: 
+1. Run “aws sts get-caller-identity” and verify that you are using IAM user (use your AWS username for eg:participant-lab-01) 
 
 ```console
 mkdir eks-lab
@@ -50,10 +49,10 @@ eksctl create cluster -f cluster-fargate-3.yaml
 21. A service account needs to be created in EKS so that it could help pods to interact with AWS services (via an IAM role). 
 22. Execute: 
 ```console
-eksctl utils associate-iam-oidc-provider --cluster fargate-cluster-3 --approve --region us-east-1
+eksctl utils associate-iam-oidc-provider --cluster fargate-cluster-3 --approve --region us-west-2
 
 # make sure there are no additional spaces than what is mentioned here
-eksctl create iamserviceaccount --namespace dev --name ddb-sa-2 --cluster fargate-cluster-3 --attach-policy-arn arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess --approve --region us-east-1
+eksctl create iamserviceaccount --namespace dev --name ddb-sa-2 --cluster fargate-cluster-3 --attach-policy-arn arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess --approve --region us-west-2
 ```
 
 23. Check the details of the service account. Execute: 
