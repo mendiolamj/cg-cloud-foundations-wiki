@@ -4,6 +4,8 @@
 
 _Image Source: https://kubernetes.io/docs/tutorials/kubernetes-basics/create-cluster/cluster-intro/_ 
 
+![](https://miro.medium.com/v2/resize:fit:640/format:webp/1*MVLS3NPzblvUSMjwu1uZRA.png)
+
 ## Kubernetes Components - 
 
 ![Source: https://kubernetes.io/docs/concepts/overview/components/](https://d33wubrfki0l68.cloudfront.net/2475489eaf20163ec0f54ddc1d92aa8d4c87c96b/e7c81/images/docs/components-of-kubernetes.svg)
