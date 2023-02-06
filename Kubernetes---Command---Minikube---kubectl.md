@@ -43,11 +43,11 @@ _Hold on for some time and let minikube do its job._
 
 **`kubectl <what action do you want to do> <on which resource> -n <your namespace> <other options> <name of the resource>`**
 
-### kubectl Namespace
- 
-Namespaces provides a mechanism for isolating groups of resources within a single cluster. If you don't provide a namespace, kubectl will directly use the "default" namespace for you.
+### kubectl 
 
 > To create a namespace use syntax - `kubectl create namespace my-namespace`
+
+_Namespaces provides a mechanism for isolating groups of resources within a single cluster. If you don't provide a namespace, kubectl will directly use the "default" namespace for you._
 
 > To list the current namespaces in a cluster using `kubectl get namespace`
 
