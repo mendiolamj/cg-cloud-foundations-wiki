@@ -76,6 +76,27 @@ Events: ## Shows the Deployment activities since it was created.
 You can pass the new image tag directly to the Deployment using flags with the kubectl command-line tool. We will change the nginx in our manifest file to use the nginx:1.18.0 version. 
 
 ***
+`kubectl --record deployment.apps/my-deployment set image deployment.v1.apps/my-deployment my-deployment-container=nginx:1.18.0`
+
+OR
+***
+`kubectl set image deployment/my-deployment my-deployment-container=nginx:1.18.0 --record ` 
+
+* In the above command, my-deployment is the name of the Deployment and my-deployment-container is the container name as declared in the YAML file. Check the description again and compare it to the original configuration - `kubectl describe deployment my-deployment`
+* Comparing the description outputs of the original and updated versions, we have changed the image version from nginx to nginx:1.18.0 as it is stated in the Pod template. In addition, there are more events compared to before the update describing the internal processes of the rolling update. It shows here that the Deployment updated the Pods by creating and scaling a new ReplicaSet of 3 replicas and destroying the old one. Check the ReplicaSet status for clarity. `kubectl get replicaset`
+
+### Method 2
+
+***
+
+* Directly editing the manifest YAML file. Alternatively, you can edit the Deployment YAML file and change the current image version from nginx:1.18.0 to nginx:1.19.1 by running the below command then save and exit the terminal `kubectl edit deployment.v1.apps/my-deployment`
+* Check the status of the Deployment to see that we still have 3 deployments ready `kubectl get deployment my-deployment`
+* Check the description of the Deployment to see that the image has been updated `kubectl describe deployment my-deployment`
+* Finally, checking the ReplicaSet status, you can see that we created a new Deployment and scaled it up to 3 replicas while the old one was scaled down to 0. Check the ReplicaSet status - `kubectl get replicaset`
+* Clean-up: Delete the Deployment using the `kubectl delete` command.
+
+
+
 
 
 
