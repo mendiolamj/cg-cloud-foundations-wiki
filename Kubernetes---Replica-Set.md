@@ -1,36 +1,50 @@
 # Create a Kubernetes Replica Set 
 
-* Create a replicaset configuration file use syntax `vi replicaset.yaml`
-* Copy the below instructions - while maintaining Indentation as seen below: 
+* Create a YAML file using vi on the command line - `vi replicaset-app.yaml`
+* Copy, paste, and save the configuration below into your YAML file. **The indentation is very Important!**
 
 ```
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
-  name: nginx-rs
+  name: my-replicaset
 spec:
-  replicas: 5
+  replicas: 2
   selector:
     matchLabels:
-      app: nginx
+      app: my-app
   template:
     metadata:
       labels:
-        app: nginx
+        app: my-app
     spec:
       containers:
-      - name: nginx
+      - name: my-container
         image: nginx
 ```
+* Create the ReplicaSet with this command - `kubectl create -f replicaset-app.yaml`
+* Once the ReplicatSet is running, you can check its status - `kubectl get replicaset my-replicaset`
+* Next, you can check the status of the Pods running in the ReplicaSet - `kubectl get Pods` 
+
+**Scale Your Application**
+
+* An application can either be scaled up or down depending on the situation in two ways. Using the first method, you can edit the configuration file we created earlier in this exercise by changing the replicas property value to a higher number to scale up or a lower number to scale down.To scale up, edit the manifest file and change the replicas value from 2 to 5. Save and exit the vi terminal and then run the command - `kubectl replace -f replicaset-app.yaml`
+* To get the status run the command - `kubectl get replicaset my-replicaset`
+* Next, you can check the status of the Pods running in the ReplicaSet `kubectl get Pods`
+* As seen in the ReplicaSet and Pod statuses, there are 5 Replicas running and ready for use, as well as 5 Pods. To scale down, change the value of the replicas in the manifest file from 5 to 1, then run the command `kubectl replace -f replicaset-app.yaml` 
+* Check the status of the ReplicaSet `kubectl get replicaset my-replicaset`
+* Check the status of the Pod `kubectl get Pods`
+* You can see that the number of Replica and the running instance of a Pod are the same as the number specified in the manifest file replicas field.
+* An application can also be scaled up or down using the command line which is the second method.
+> `kubectl scale - -replicas=5 -f replicaset-app.yaml `  ## Scale up
+> `kubectl scale - -replicas=1 -f replicaset-app.yaml`  ## Scale down
+OR
+> `kubectl scale - -replicas= 5 replicaset <replicaset name>`   ## Scale up
+> `kubectl scale - -replicas= 1 replicaset <replicaset name> `  ## Scale down
+* Kubernetes ReplicaSet can automate application lifecycle management for efficiency
 
 
-* Run the command - `kubectl apply -f replicaset.yaml`
-* You can see the pods created by the replicaset if you do a `kubectl get all`
-* Try deleting a pod and see what happens – it should self heal and bring it back up (`kubectl delete pod/pod-name`)
-* Look at desired, current and ready states! Run `kubectl get Pods` and You can then get the current ReplicaSets deployed using `kubectl get rs`
-* Your service should still be running
-* Note that this replicaset is still attaching to our service through the label selector
-* so if service is still running you should be able to see the nginx response in the browser by going to http://localhost:30001/
-* Try deleting the service, do you still see the nginx homepage?
-* Everything under template is specific to the pods its creating
-* Note that we don’t explicitly use the word pod in the replicaset.yaml file, it’s implied!
+
+
+
+
