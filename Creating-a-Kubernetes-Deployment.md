@@ -79,8 +79,9 @@ You can pass the new image tag directly to the Deployment using flags with the k
 `kubectl --record deployment.apps/my-deployment set image deployment.v1.apps/my-deployment my-deployment-container=nginx:1.18.0`
 
 OR
-***
+
 `kubectl set image deployment/my-deployment my-deployment-container=nginx:1.18.0 --record ` 
+
 
 * In the above command, my-deployment is the name of the Deployment and my-deployment-container is the container name as declared in the YAML file. Check the description again and compare it to the original configuration - `kubectl describe deployment my-deployment`
 * Comparing the description outputs of the original and updated versions, we have changed the image version from nginx to nginx:1.18.0 as it is stated in the Pod template. In addition, there are more events compared to before the update describing the internal processes of the rolling update. It shows here that the Deployment updated the Pods by creating and scaling a new ReplicaSet of 3 replicas and destroying the old one. Check the ReplicaSet status for clarity. `kubectl get replicaset`
