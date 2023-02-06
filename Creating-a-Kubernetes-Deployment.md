@@ -66,6 +66,18 @@ Containers.image: ## This field specifies the container and container image name
 Events: ## Shows the Deployment activities since it was created.
 ```
 
+### Update a Kubernetes Deployment
+
+* You can edit a Deployment by changing the container image from one version to the other, decreasing or increasing the number of instances by changing the ReplicaSet value. etc. For example, the container image nginx we have been using in our exercises has many versions. When no version is specified in the manifest YAML file, the latest version will be pulled from the image repository. We will change the current image version to another as an example.
+
+* **A Deployment can be updated to use a new image in two ways** - 
+
+### Method 1 
+You can pass the new image tag directly to the Deployment using flags with the kubectl command-line tool. We will change the nginx in our manifest file to use the nginx:1.18.0 version. 
+
+***
+
+
 
 
 
