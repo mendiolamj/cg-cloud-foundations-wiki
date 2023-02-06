@@ -40,7 +40,13 @@ spec:
 > `kubectl scale - -replicas=5 -f replicaset-app.yaml `  ## Scale up
 
 > `kubectl scale - -replicas=1 -f replicaset-app.yaml`  ## Scale down
+
+***
+
 OR
+
+***
+
 
 > `kubectl scale - -replicas= 5 replicaset <replicaset name>`   ## Scale up
 
