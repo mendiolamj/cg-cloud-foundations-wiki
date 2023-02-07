@@ -62,7 +62,7 @@ rm main.tf
 
 ---------------------------------------------
 
-## Variables Testing
+## Part 2 - Variables Testing
 
 Delete the older main.tf file. 
 
