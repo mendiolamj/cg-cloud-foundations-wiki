@@ -60,7 +60,7 @@ rm main.tf
 
 ---------------------------------------------
 
-**Variables Testing**
+## Variables Testing
 
 Delete the older main.tf file. 
 
@@ -82,6 +82,8 @@ Execute:
 terraform apply -var-file="testing.tfvars"
 ```
 ------------------------------------------------------------------------------
+
+## Bonus Milestone
 Delete all the files from the tf-lab folder and then download this file. 
 
 ```console
