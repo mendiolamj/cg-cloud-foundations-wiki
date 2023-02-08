@@ -108,7 +108,26 @@ variable "instance_name" {
   default     = "1ExampleAppServerInstance"
 }
 ```
+Each input variable accepted by a module (in our case the main.tf module) must be declared using a variable block.
 
+As we did above, we can provide a default value if  no value is passed in and a description along with a type.
+
+Notice that we have both a variables.tf file and a testing.tfvars file - what's the difference between these two?
+
+The difference is this:
+variables.tf are files where all variables are declared; these might or might not have a default value variable. 
+
+tfvars are files where the variables are provided/assigned a value. You can clearly see that there is a value being assigned in this file.  This is somewhat similar to setting an environment variable.
+
+Great, so we've seen the file that holds the variable, the file that holds the value, but where do we actually use the variable?  Well, that's in the main.tf file - you can clearly see that here (excerpted from the main.tf file):
+
+```bash
+  tags = {
+    Name = var.instance_name
+  }
+```
+
+So, how do we create the resource while also passing in a value for the variable?  Well, simply run this statement:
 
 Execute: 
 ```console
