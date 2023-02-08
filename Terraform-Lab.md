@@ -39,8 +39,14 @@ resource "aws_instance" "app_server" {
 
 ```
 
+Resources are the most important element in the Terraform language. Each resource block describes one or more infrastructure objects (in our case an EC2 instance in AWS), such as virtual networks, compute instances, or higher-level components such as DNS records.
+
+The first parameter required to create an EC2 instance is the AMI - amazon machine image,  An Amazon Machine Image (AMI) is a supported and maintained image provided by AWS that provides the information required to launch an instance. 
+
+The second is the instance type.  Note that we are also giving it a tag so that we can name it.
 
 
+Let's see how to install and apply the Terraform files so that we can create an EC2 resource via Terraform.
 Here are the steps to take:
 
 1. Navigate to IAM Users > CloudLearner.
