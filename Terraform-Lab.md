@@ -64,9 +64,28 @@ rm main.tf
 
 ## Part 2 - Variables Testing
 
-Delete the older main.tf file. 
+Let's take a look at variables in Terraform.  But first, let's talk about why we would need them.
 
-Download these files: 
+
+Suppose we want to give our EC2 instance a tag name - would it be a good idea to hardcode that name directly inside our Terraform module?  Yes, we did actually hardcode the tag name in our Terraform module earlier - but the answer is no - that is typically not a good idea.
+
+Think about why.🤔
+
+Well it basically makes our Terraform module less reusable and composable if we hardcode the instance name there.
+
+So, instead of hardcoding variable we can use variables so that our modules are more reusable and composable.  
+
+If you're familiar with traditional programming languages, it can be useful to compare Terraform modules to function definitions - and if terraform modules are like function definitions then:
+* Input variables are like function arguments.
+* [Output values](https://developer.hashicorp.com/terraform/language/values/outputs) are like function return values.
+* [Local values](https://developer.hashicorp.com/terraform/language/values/locals) are like a function's temporary local variables
+
+
+So, we can say that our main.tf file is essentially like a function definition - in the new main.tf file that you will be downloading, you will see why it looks a bit like a function definition.
+
+First, delete the older main.tf file. 
+
+Go ahead and download these files: 
 
 
 ```console
@@ -78,6 +97,18 @@ wget https://usaa-aws-resources.s3.amazonaws.com/tf-lab/02+-+with+input+%26+outp
 
 wget https://usaa-aws-resources.s3.amazonaws.com/tf-lab/03+-+with+tfvars/testing.tfvars 
 ```
+
+
+Take a look at the variables.tf file - you will see that this is where we define the variable:
+
+```bash
+variable "instance_name" {
+  description = "Value of the Name tag for the EC2 instance"
+  type        = string
+  default     = "1ExampleAppServerInstance"
+}
+```
+
 
 Execute: 
 ```console
