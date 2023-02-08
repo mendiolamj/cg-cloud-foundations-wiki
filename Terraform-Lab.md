@@ -5,6 +5,42 @@ Here's an overview of the lab:
 
 ## Part 1 - Install Terraform and Create Resources on AWS
 
+Our goal is to create an EC2 instance using Terraform to see how IaC with Terraform works.
+
+
+Terraform relies on plugins called providers to interact with cloud providers, SaaS providers, and other APIs.
+Terraform configurations must declare which providers they require so that Terraform can install and use them. Additionally, some providers require configuration (like endpoint URLs or cloud regions) before they can be used.
+
+Basically providers tell Terraform who we want to interact with - in our case, we want to interact with AWS, so we will see this code in the main.tf file that we will be downloading:
+
+```code
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 3.27"
+    }
+```
+
+Note that AWS is just one of many providers that we can use with Terraform. We could just as well create cloud resources in GCP (Google Cloud Provider), Microsoft Azure, and many others.  For a full list of providers, see here: https://registry.terraform.io/browse/providers
+
+
+Now we’ve specified the “who” - which is AWS, we still need to specify the “what” - ie what resource we want to create in AWS.  Since we want to create an EC2 instance in AWS, we will see the following in our main.tf file (that we will download shortly):
+
+
+```code
+resource "aws_instance" "app_server" {
+  ami           = "ami-087c17d1fe0178315"
+  instance_type = "t2.micro"
+
+  tags = {
+    Name = "ExampleAppServerInstance"
+  }
+}
+
+```
+
+
+
 Here are the steps to take:
 
 1. Navigate to IAM Users > CloudLearner.
@@ -52,7 +88,7 @@ terraform validate
 terraform apply
 ```
 
-7. Verify the created resource in the AWS management console. 
+7. Verify the created resource in the AWS management console. Congrats! You have now seen IaC in action - using 
 8. Now destroy this resource. Execute:
 
 ```console
