@@ -94,7 +94,7 @@ terraform validate
 terraform apply
 ```
 
-7. Verify the created resource in the AWS management console. Congrats! You have now seen IaC in action - using 
+7. Verify the created resource in the AWS management console. Congrats! You have now seen IaC in action.
 8. Now destroy this resource. Execute:
 
 ```console
