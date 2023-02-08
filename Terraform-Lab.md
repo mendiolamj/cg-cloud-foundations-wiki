@@ -94,7 +94,13 @@ terraform validate
 terraform apply
 ```
 
-7. Verify the created resource in the AWS management console. Congrats! You have now seen IaC in action.
+The terraform init command initializes a working directory containing configuration files and installs plugins for required providers.  The plugin we need in this case is the AWS plugin.  
+
+ Terraform validate command is used to validate the syntax of the configuration included in Terraform file locally. 
+
+And finally, the terraform apply command executes the actions proposed in a Terraform plan to create, update, or destroy infrastructure.  In our case, we are clearly creating infrastructure
+
+7. Verify the created resource in the AWS management console. Congrats! You have now seen IaC in action and have visual confirmation that a resource was actually created by looking at the AWS console.
 8. Now destroy this resource. Execute:
 
 ```console
