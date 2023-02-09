@@ -21,7 +21,7 @@ Basically providers tell Terraform who we want to interact with - in our case, w
     }
 ```
 
-Note that AWS is just one of many providers that we can use with Terraform. We could just as well create cloud resources in GCP (Google Cloud Provider), Microsoft Azure, and many others.  For a full list of providers, see here: https://registry.terraform.io/browse/providers
+Note that AWS is just one of many providers that we can use with Terraform. We could just as well create cloud resources in GCP (Google Cloud Provider), Microsoft Azure, and many others.  
 
 
 Now we’ve specified the “who” - which is AWS, we still need to specify the “what” - ie what resource we want to create in AWS.  Since we want to create an EC2 instance in AWS, we will see the following in our main.tf file (that we will download shortly):
