@@ -59,7 +59,7 @@ Here are the steps to take:
 ```console
 aws configure 
 Specify the Access Key ID & Secret Access Key from the file you have. 
-Specify us-east-1 for region.
+Specify us-west-2 for region.
 Specify json for output format. 
 ```
 6. Do the necessary setup on the Public EC2 instance to run Terraform code. Execute the following: 
