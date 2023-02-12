@@ -2,7 +2,7 @@
 
 
 
-* We will start with an existing React application that simply maintains a todo list - see here: https://github.com/varoonsahgal/rrf-todo/tree/lab2-ref-updated
+* We will start with an existing React application that simply maintains a todo list - see here: https://github.com/varoonsahgal/rrf-todo/tree/lab3-with-axios
 
 
 * Our goal will be to Dockerize/containerize the React application and then set it up for CI/CD utilizing AWS services
