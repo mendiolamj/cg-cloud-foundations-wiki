@@ -15,7 +15,7 @@
 
 * We will load the initial todos that get displayed in the application by hitting an API which utilizes a Lambda that will then retrieve the initial todos from an S3 bucket (which you populate)
  
-* The first thing you will need to do is containerize the application by using a Dockerfile and perhaps use Docker compose as well
+* The first thing you will need to do is containerize the application by using a Dockerfile.
 
 * Then, setup CI/CD with Codebuild + Codepipeline - upload the image to ECR, and set it up such that every time you update the github repository the Docker image is rebuilt and redeployed.
 
