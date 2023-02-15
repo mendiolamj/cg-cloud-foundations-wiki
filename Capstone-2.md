@@ -21,7 +21,9 @@
 
 * Redeployed where though?  Good question -  you will need to deploy your container to an orchestrator - you will use Fargate + EKS.  Set that up as well!
 
-* Finally you will utilize Terraform to manage our infrastructure.  For high availability and disaster recovery, you will deploy our application to 2 regions.  We will also want our S3 buckets to live in 2 different regions as well.  
+* Finally you will utilize Terraform to manage our infrastructure.  
+
+_For high availability and disaster recovery, you will deploy our application to 2 AZ or regions.  We will also want our S3 buckets to live in 2 different regions/AZ as well.  _
 
 
 
