@@ -4,6 +4,8 @@
 
 * We will start with an existing React application that simply maintains a todo list - see here: https://github.com/neerajk555/react-new-todo.git
 
+* todo-data.json can be found here - https://github.com/neerajk555/react-new-todo/blob/main/todo-data.json 
+
 
 * Our goal will be to Dockerize/containerize the React application and then set it up for CI/CD utilizing AWS services. The challenge for you is to write the Docker File and Terraform steps. You can consider Capstone 1 for reference! 
 
