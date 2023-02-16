@@ -2,7 +2,7 @@
 
 
 
-* We will start with an existing React application that simply maintains a todo list - see here: https://github.com/varoonsahgal/rrf-todo/tree/lab3-with-axios
+* We will start with an existing React application that simply maintains a todo list - see here: https://github.com/neerajk555/react-new-todo.git
 
 
 * Our goal will be to Dockerize/containerize the React application and then set it up for CI/CD utilizing AWS services. The challenge for you is to write the Docker File and Terraform steps. You can consider Capstone 1 for reference! 
@@ -28,8 +28,8 @@ _For high availability and disaster recovery, you will deploy our application to
 
 
 Notes:
-* For the React application, you will just have to update the endpoint on line 11 here: https://github.com/varoonsahgal/rrf-todo/blob/lab3-with-axios/src/actions.js and replace that endpoint with whatever is generated via AWS API gateway. 
-* You may run into some CORS issues but resolve by setting the appropriate headers - note that you can also see there's a fake mock server locally in server/db.json file as well
+* For the React application, you will just have to update the endpoint on line 10 here: https://github.com/neerajk555/react-new-todo/blob/main/react-axios-example/src/components/PersonList.js  and replace that endpoint with whatever is generated via AWS API gateway. 
+* You may run into some CORS issues but resolve by setting the appropriate headers 
 
 Cross-Origin Resource Sharing (CORS) is a security feature that restricts the ability of web pages to make requests to resources located on a different domain. If you are getting CORS errors when trying to access an API hosted on Amazon API Gateway, you can try the following steps to fix the issue:
 
