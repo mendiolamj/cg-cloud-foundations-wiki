@@ -114,12 +114,24 @@ Then, click on the AMI ID and then the Launch instance from AMI button on the to
 
 <img width="1448" alt="Screen Shot 2023-02-21 at 8 20 55 AM" src="https://user-images.githubusercontent.com/25653204/220355949-26d40a78-f1b2-4073-98ed-0df01cfdab5b.png">
 
+26. As before, put in a name, leave the default alone for the section that says "Application and OS Images" - it should have the AMI name that you just created as the default, like so:
+
+<img width="807" alt="Screen Shot 2023-02-21 at 9 15 53 AM" src="https://user-images.githubusercontent.com/25653204/220369455-641ecf7a-823a-4b38-a982-43a1756d9f2d.png">
+
+27. For the key pair section, reuse the same key pair that you used before (do not use the one with the name test as shown in the screenshot below):
+
+<img width="825" alt="Screen Shot 2023-02-21 at 9 17 27 AM" src="https://user-images.githubusercontent.com/25653204/220369829-9a289367-22c1-4139-b3fd-7252195f4ec3.png">
+
+28.  Again, in network settings check the boxes for allow https traffic from the internet and http traffic from the internet:
+<img width="813" alt="Screen Shot 2023-02-21 at 9 18 57 AM" src="https://user-images.githubusercontent.com/25653204/220370180-99e72248-e0e3-4a79-867e-3613e8aeb05b.png">
 
 
- (after this, follow the above steps 5 to 11). 
-1. Check if all your changes persist in the new EC2 instance? (i.e. Webserver installation). You can check this by opening the new instance’s Public IP/hostname from a browser. 
-1. After completing the above steps, terminate all the EC2 instances. It will disappear from the console after an hour.
-1. Look at the menu items on the left side for AMI, Volumes & Snapshots. 
-1. Deregister all the AMIs.
-1. Delete all the snapshots from your account.
-1. Delete all the volumes from your account. 
+29. For Configure storage and Advanced details sections leave the defaults alone - no changes necessary.
+
+30.  Finally, click the Launch instance orange button on the bottom right.
+
+31.  Now, the question is do you have Apache already installed in the new EC2 instance?  You should by default!  Visit the public IP from a browser and you should see the Apache red Test page.
+
+But remember, we did NOT install Apache manually for this EC2 instance - the reason it came with the instance is because we created our very own AMI with Apache pre-installed.  Pretty cool right? 
+
+32. Go ahead and terminate all of your EC2 instances and deregister your AMI
