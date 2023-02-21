@@ -22,16 +22,48 @@ _And here are the steps to follow to complete the lab:_
 6. Under instance type, leave the default alone, so it looks like this:
 <img width="856" alt="Screen Shot 2023-02-20 at 9 27 00 PM" src="https://user-images.githubusercontent.com/25653204/220232018-b2d0ec31-05f0-4c7a-865e-8441b6f24ac0.png">
 
-1. Under key pair, go ahead and put in "put your name here key pair" - so "Andrew Smith key pair" for example.  The key pair is how we connect to our EC2 instance.  We do not want to let just anyone connect to anyone's EC2 instance, so think of the key pair like house keys for your EC2 instance:
+7. Under key pair, go ahead and put in "put your name here key pair" - so "Andrew Smith key pair" for example.  The key pair is how we connect to our EC2 instance.  We do not want to let just anyone connect to anyone's EC2 instance, so think of the key pair like house keys for your EC2 instance:
 
 <img width="864" alt="Screen Shot 2023-02-20 at 9 31 36 PM" src="https://user-images.githubusercontent.com/25653204/220232565-7a3f8a55-b4da-4902-b237-9eb5b0ec1f84.png">
 
 
-1. Under Step 3, select Default for Network.
-1. Select any Subnet in the Subnet dropdown. 
-1. For Auto-assign Public IP, select Enable.
-1. Click on the Next button at the bottom.
-1. Under Step 4, click on the Next button at the bottom.
+8. Under Network Settings, leave all of the defaults alone EXCEPT you should check the boxes that say "Allow HTTPs traffic from the internet" and "Allow HTTP traffic from the internet". So it should look like this:
+
+<img width="829" alt="Screen Shot 2023-02-21 at 7 19 50 AM" src="https://user-images.githubusercontent.com/25653204/220343383-37c8e110-42ee-4057-8d4d-0f789204e209.png">
+
+9.  Leave all the other defaults alone for the "Configure Storage" and "Advanced details" sections - so no changes are necessary there:
+<img width="848" alt="Screen Shot 2023-02-21 at 7 21 55 AM" src="https://user-images.githubusercontent.com/25653204/220343775-6faea675-24f9-4796-b833-29272235beb2.png">
+
+10. For the summary, leave all the defaults alone as well:
+
+
+<img width="840" alt="Screen Shot 2023-02-21 at 7 28 15 AM" src="https://user-images.githubusercontent.com/25653204/220345059-c4baef62-760d-4f8e-87c1-f579cf3744b8.png">
+
+
+11.  Finally, click the Launch Instance button at the bottom right to launch your EC2 instance!:
+
+<img width="843" alt="Screen Shot 2023-02-21 at 7 29 15 AM" src="https://user-images.githubusercontent.com/25653204/220345269-78814e9d-3555-4030-908d-b5f7b34d22b5.png">
+
+12. Once you launch, in the EC2 dashboard, click Instances on the left hand menu:
+
+<img width="1251" alt="Screen Shot 2023-02-21 at 7 36 08 AM" src="https://user-images.githubusercontent.com/25653204/220346575-1b0a2bb8-883e-4841-8e57-5ab7d9cb8c67.png">
+
+13.  Then, click on the instance ID and you should get a page that looks like this:
+
+<img width="1222" alt="Screen Shot 2023-02-21 at 7 37 01 AM" src="https://user-images.githubusercontent.com/25653204/220346746-6c9f1885-7c36-438a-861a-4b3dc8cb9d8c.png">
+
+
+
+14. Go ahead and click on the Connect button
+
+15. Then click on the EC2 Instance Connect tab: 
+
+<img width="956" alt="Screen Shot 2023-02-21 at 7 37 48 AM" src="https://user-images.githubusercontent.com/25653204/220346893-93d27c14-d369-418b-8626-32992a770bed.png">
+
+16. Once that connects, you should get a page that looks like this: 
+
+
+
 1. Under Step 5, add a tag with key = Name & value = Test Instance. Click on the Next button at the bottom.
 1. Under Step 6, Create a new Security Group and it should have rules for port 22 & 80 incoming from anywhere (0.0.0.0/0). Click on the Review & Launch button at the bottom.
 1. Under Step 7, Click on Launch button. 
