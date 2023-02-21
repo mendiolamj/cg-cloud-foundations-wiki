@@ -100,13 +100,9 @@ On the bottom left where it says `Auto-assigned IP address` select that and past
 
 <img width="1466" alt="Screen Shot 2023-02-21 at 8 13 15 AM" src="https://user-images.githubusercontent.com/25653204/220354319-60666b4c-4179-4acd-9473-eccd64757776.png">
 
-<img width="1442" alt="Screen Shot 2023-02-21 at 8 10 33 AM" src="https://user-images.githubusercontent.com/25653204/220353743-07090f18-828f-4df3-a01e-d2725e038461.png">
 
 
-
-Select the instance and explore the Actions > Image & Templates > Create Image button at the top. 
-
-24. Give the image a name -  "You name here image", ie "Jane Doe image"
+24. Give the image a name -  "You name here image", ie "Jane Doe image".  Leave all of the defaults alone and click the "Create image" button on the bottom right.
 
 25. 
 
