@@ -29,9 +29,7 @@ _And here are the steps to follow to complete the lab:_
 The key should go into your Downloads folder on your participant virtual machine.
 
 
-8. Under Network Settings, leave all of the defaults alone EXCEPT you should check the boxes that say "Allow HTTPs traffic from the internet" and "Allow HTTP traffic from the internet". So it should look like this:
-
-<img width="829" alt="Screen Shot 2023-02-21 at 7 19 50 AM" src="https://user-images.githubusercontent.com/25653204/220343383-37c8e110-42ee-4057-8d4d-0f789204e209.png">
+8. Under Network Settings, go ahead and "select existing security group" and then choose the security group that says default.
 
 9.  Leave all the other defaults alone for the "Configure Storage" and "Advanced details" sections - so no changes are necessary there:
 <img width="848" alt="Screen Shot 2023-02-21 at 7 21 55 AM" src="https://user-images.githubusercontent.com/25653204/220343775-6faea675-24f9-4796-b833-29272235beb2.png">
