@@ -76,9 +76,11 @@ The key should go into your Downloads folder on your participant virtual machine
 
 19. Now that you are connected to the EC2 instance, we are going to install a web server called Apache.  The web server uses packages called httpd, so we will run these commands one by one in your terminal:
 
-1. sudo yum install -y httpd
-1. sudo systemctl enable httpd
-1. sudo service httpd start
+```bash
+sudo yum install -y httpd
+sudo systemctl enable httpd
+sudo service httpd start
+```
 
 
 20.  The commands in step 19 should install and start the Apache web server.  Then, to check on the status of it, you can run `sudo service httpd status` and you should see something like this:
