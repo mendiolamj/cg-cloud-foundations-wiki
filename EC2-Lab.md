@@ -104,10 +104,17 @@ On the bottom left where it says `Auto-assigned IP address` select that and past
 
 24. Give the image a name -  "You name here image", ie "Jane Doe image".  Leave all of the defaults alone and click the "Create image" button on the bottom right.
 
-25. 
+25. On the left menu in the EC2 dashboard, you will see a section that says images.  Click on that and then AMIs.  
 
-1. Navigate to AMIs from the left hand menu. 
-1. Once the AMI is Available, select it and launch another instance from the AMI using the button given above (after this, follow the above steps 5 to 11). 
+<img width="1440" alt="Screen Shot 2023-02-21 at 8 19 44 AM" src="https://user-images.githubusercontent.com/25653204/220355694-3f15aefc-f43b-448a-96ea-102c7a9458f0.png">
+
+Then, click on the AMI ID and then the Launch instance from AMI button on the top right:
+
+<img width="1448" alt="Screen Shot 2023-02-21 at 8 20 55 AM" src="https://user-images.githubusercontent.com/25653204/220355949-26d40a78-f1b2-4073-98ed-0df01cfdab5b.png">
+
+
+
+ (after this, follow the above steps 5 to 11). 
 1. Check if all your changes persist in the new EC2 instance? (i.e. Webserver installation). You can check this by opening the new instance’s Public IP/hostname from a browser. 
 1. After completing the above steps, terminate all the EC2 instances. It will disappear from the console after an hour.
 1. Look at the menu items on the left side for AMI, Volumes & Snapshots. 
