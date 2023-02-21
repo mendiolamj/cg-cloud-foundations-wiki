@@ -26,6 +26,8 @@ _And here are the steps to follow to complete the lab:_
 
 <img width="864" alt="Screen Shot 2023-02-20 at 9 31 36 PM" src="https://user-images.githubusercontent.com/25653204/220232565-7a3f8a55-b4da-4902-b237-9eb5b0ec1f84.png">
 
+The key should go into your Downloads folder on your participant virtual machine.
+
 
 8. Under Network Settings, leave all of the defaults alone EXCEPT you should check the boxes that say "Allow HTTPs traffic from the internet" and "Allow HTTP traffic from the internet". So it should look like this:
 
@@ -56,24 +58,58 @@ _And here are the steps to follow to complete the lab:_
 
 14. Go ahead and click on the Connect button
 
-15. Then click on the EC2 Instance Connect tab: 
+15. Then click on the SSH Client tab: 
 
-<img width="956" alt="Screen Shot 2023-02-21 at 7 37 48 AM" src="https://user-images.githubusercontent.com/25653204/220346893-93d27c14-d369-418b-8626-32992a770bed.png">
-
-16. Once that connects, you should get a page that looks like this: 
+<img width="889" alt="Screen Shot 2023-02-21 at 7 51 48 AM" src="https://user-images.githubusercontent.com/25653204/220349498-3d7988ea-1c0a-4bc9-9fab-03d3baab677a.png">
 
 
+16. From your participant machine, open up a terminal instance, then go into the directory where your key was downloaded by typing "cd ~/Downloads"
 
-1. Under Step 5, add a tag with key = Name & value = Test Instance. Click on the Next button at the bottom.
-1. Under Step 6, Create a new Security Group and it should have rules for port 22 & 80 incoming from anywhere (0.0.0.0/0). Click on the Review & Launch button at the bottom.
-1. Under Step 7, Click on Launch button. 
-1. Create a new key pair, give it a name and download it. After that click on the Launch Instances button. 
-1. Select the launched instance and press on the Connect button. Execute the following command after you have SSHed into the instance (to install the web server and then start the service). 
+17.  Then, run the chmod command that it tells you to run in step 3 - note that your command will look slightly different since the name of your file is different:
+
+
+<img width="859" alt="Screen Shot 2023-02-21 at 7 56 18 AM" src="https://user-images.githubusercontent.com/25653204/220350497-427f8812-03c9-402e-bae9-544cc6ad4e46.png">
+
+18.  Now, run the command under where it says Example - note that it's easy to copy and paste the command into your terminal window by simply selecting the icon with 2 boxes:
+
+<img width="854" alt="Screen Shot 2023-02-21 at 7 57 20 AM" src="https://user-images.githubusercontent.com/25653204/220350717-559531c3-5a65-4858-9244-0cffb674327a.png">
+
+19. Now that you are connected to the EC2 instance, we are going to install a web server called Apache.  The web server uses packages called httpd, so we will run these commands one by one in your terminal:
+
 1. sudo yum install -y httpd
 1. sudo systemctl enable httpd
 1. sudo service httpd start
-1. In a browser window, try to access the website using the EC2’s Public IP or Public Hostname (on port 80). Ensure that you use the HTTP url.  
-1. Stop this instance and then create an AMI of it. Select the instance and explore the Actions > Image & Templates > Create Image button at the top. 
+
+
+20.  The commands in step 19 should install and start the Apache web server.  Then, to check on the status of it, you can run `sudo service httpd status` and you should see something like this:
+
+<img width="1056" alt="Screen Shot 2023-02-21 at 8 03 32 AM" src="https://user-images.githubusercontent.com/25653204/220352365-f984f4b6-6401-4daf-a1d5-3c03bdd01a3f.png">
+
+21. Navigate back to your EC2 instance and you should see: 
+<img width="1452" alt="Screen Shot 2023-02-21 at 8 06 25 AM" src="https://user-images.githubusercontent.com/25653204/220352995-3ab6bdef-ac55-452f-b066-b3fb07215604.png">
+
+On the bottom left where it says `Auto-assigned IP address` select that and paste it into the browser window.  You should then see this page - which is the Apache(httpd) web server that we installed on the machine:
+
+
+<img width="1423" alt="Screen Shot 2023-02-21 at 8 07 25 AM" src="https://user-images.githubusercontent.com/25653204/220353148-346f4e6e-0e33-40ee-b64a-2c13afe27ad7.png">
+
+22. Stop this instance by going to Instance state -> Stop instance 
+
+23. Now, we will create an AMI from this instance by going to Actions-> Image and templates -> Create Image :   
+
+
+<img width="1466" alt="Screen Shot 2023-02-21 at 8 13 15 AM" src="https://user-images.githubusercontent.com/25653204/220354319-60666b4c-4179-4acd-9473-eccd64757776.png">
+
+<img width="1442" alt="Screen Shot 2023-02-21 at 8 10 33 AM" src="https://user-images.githubusercontent.com/25653204/220353743-07090f18-828f-4df3-a01e-d2725e038461.png">
+
+
+
+Select the instance and explore the Actions > Image & Templates > Create Image button at the top. 
+
+24. Give the image a name -  "You name here image", ie "Jane Doe image"
+
+25. 
+
 1. Navigate to AMIs from the left hand menu. 
 1. Once the AMI is Available, select it and launch another instance from the AMI using the button given above (after this, follow the above steps 5 to 11). 
 1. Check if all your changes persist in the new EC2 instance? (i.e. Webserver installation). You can check this by opening the new instance’s Public IP/hostname from a browser. 
