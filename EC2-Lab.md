@@ -6,9 +6,27 @@ _And here are the steps to follow to complete the lab:_
 
 1. Under Search for services, type in and then click EC2.
 1. In the left-hand EC2 Dashboard navigation menu, click Instances.
-1. Click on the Launch Instances button.
-1. Under Step 1, click Select against Amazon Linux 2 AMI (HVM).
-1. Under Step 2, select t2.micro and click on the Next button at the bottom.
+1. Click on the orange Launch Instances button.
+
+<img width="1251" alt="Screen Shot 2023-02-20 at 9 22 55 PM" src="https://user-images.githubusercontent.com/25653204/220231469-a843e690-234e-47d9-b91f-73b74bf146f7.png">
+
+1. Put in a name - you can call it "<Your full name>'s EC2 instance" - for example "Andrew Jones' EC2 instance"
+
+<img width="914" alt="Screen Shot 2023-02-20 at 9 24 36 PM" src="https://user-images.githubusercontent.com/25653204/220231682-2bcbc94d-750b-44be-9030-21d5f01acf04.png">
+
+1. Under "Application and OS Images (Amazon Machine Image)", leave the defaults alone - so it should look something like this:
+
+<img width="841" alt="Screen Shot 2023-02-20 at 9 25 47 PM" src="https://user-images.githubusercontent.com/25653204/220231853-7fc9c415-d174-45d0-a472-e973a5536240.png">
+
+
+1. Under instance type, leave the default alone, so it looks like this:
+<img width="856" alt="Screen Shot 2023-02-20 at 9 27 00 PM" src="https://user-images.githubusercontent.com/25653204/220232018-b2d0ec31-05f0-4c7a-865e-8441b6f24ac0.png">
+
+1. Under key pair, go ahead and put in "<your full name> key pair" - so "Andrew Smith key pair" for example.  The key pair is how we connect to our EC2 instance.  We do not want to let just anyone connect to anyone's EC2 instance, so think of the key pair like house keys for your EC2 instance:
+
+<img width="864" alt="Screen Shot 2023-02-20 at 9 31 36 PM" src="https://user-images.githubusercontent.com/25653204/220232565-7a3f8a55-b4da-4902-b237-9eb5b0ec1f84.png">
+
+
 1. Under Step 3, select Default for Network.
 1. Select any Subnet in the Subnet dropdown. 
 1. For Auto-assign Public IP, select Enable.
