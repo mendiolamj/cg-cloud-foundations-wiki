@@ -64,72 +64,6 @@ Following **least privilege best practices**, we will be attaching policies with
 
 
 
-### Step 2 - Create Policy and Attach it to the role
-
-We can add the needed permissions via the CLI or the AWS console. We will use the AWS console for this operation.
-
-Logging into the AWS console, [click here](https://console.aws.amazon.com/?nc2=h_m_mc), and navigate to the IAM service. Then click on "**Roles**", left area of the screen.
-![alt text](/res/S1F1%20IAM.png)
-
-
-<**Figure-1**>
-
-
-Search for the role that has been set up and attached to the instance by the CloudFormation template, its name is **KMSWorkshop-InstanceInitRole**. 
-
-![alt text](/res/S1F2%20KMSinitRole.png)
-
-<**Figure-2**>
-
-
-Click on the role and then on "**Attach Policies**" button, we are going to provide permissions so the instance can create Keys. A new screen where you can now search for Policies will appear.
-![alt text](/res/S1F3%20AttachPolicy.png)
-
-<**Figure-3**>
-
-
-Now, search "**AWSKeyManagement**", and select the policy "**AWSKeyManagementSystemPowerUser**".  That is the policy we are going to use for the instance role. **Please note**, the assigment of KMS Power User permissions is **just** for the initial walk-through in KMS, a typical user might not need the whole set of permissions. Later in the workshop we will work on how to implement more fine grained "Least Privilege" access, according to best practices,  in order to assign appropriate permissions to users and roles into KMS operations.
-As this point we can review the policy, just by clicking on the small black arrow close to the policy name to expand it.
-
-![Figure-4](/res/S1F4%20KMSPowerUserPolicy.png)
-
-<**Figure-4**>
-
-
-
- See the operations the policy allowing as a Poweruser into AWS KMS.
-
-```
-{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Effect": "Allow",
-            "Action": [
-                "kms:CreateAlias",
-                "kms:CreateKey",
-                "kms:DeleteAlias",
-                "kms:Describe*",
-                "kms:GenerateRandom",
-                "kms:Get*",
-                "kms:List*",
-                "kms:TagResource",
-                "kms:UntagResource",
-                "iam:ListGroups",
-                "iam:ListRoles",
-                "iam:ListUsers"
-            ],
-            "Resource": "*"
-        }
-    ]
-}
-```
-
-
-Select the policy and click the "Attach policy" button at botton right of the page. The role attached to the instance is modified with his new policy and we should be able to create a Customer Master Key (CMK) now from the instance. Let's try it.
-
-
-
 ### Step 3 - Create the key  - again - and set an alias
 
 Run the aws kms create-key command you should see the result from the creation of the key as a JSON block with the metadata of the key. See example below:
@@ -160,11 +94,11 @@ The ARN of the key and its status ("Enabled", "Disabled") are highly relevant to
 
 If you go back to the AWS console and navigate to the IAM service. Click in the left area to the bottom, "Encryption Keys", the key you have just created is already listed there. **Important: Remember to select the right Region in the KMS screen**. However, as we used the create-key command without parameters, it does not contain any alias to display and looks like its alias is empty. See image below the region selection and the blank alias name.
 
-![Figure-15](/res/S1F15.png)
-<**Figure-15**>
+
+<img width="1331" alt="Screen Shot 2023-02-27 at 1 34 55 PM" src="https://user-images.githubusercontent.com/25653204/221652648-98355aff-7c1c-4d83-8cbd-31440f255e12.png">
 
 
-Key aliases are very useful. They are easier to remenber when operating with keys. Most importantly, when rotation keys, as we will see later in this section, we will not have to update our code to update the new KeyIDs or ARN references. By using alias in our code to call the CMKs by them, and updating the alias CMKs to point to the newly generated key, the amount of change in our code gets minimized.
+Key aliases are very useful. They are easier to remember when operating with keys. Most importantly, when rotation keys, as we will see later in this section, we will not have to update our code to update the new KeyIDs or ARN references. By using alias in our code to call the CMKs by them, and updating the alias CMKs to point to the newly generated key, the amount of change in our code gets minimized.
 
 Let's create an alias, "**FirstCMK**",  with the command aws kms create-alias. 
 Remember to replace 'your-key-id' with the value obtained from previous command (aws kms create-key).
