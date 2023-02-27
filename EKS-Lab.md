@@ -85,10 +85,9 @@ unzip awscliv2.zip
 ./aws/install
 
 aws sts get-caller-identity
-```
+
 # you should see the reference to the IAM role related to the created service account.
 
-```console
 aws dynamodb list-tables --region us-east-1
 ```
 
