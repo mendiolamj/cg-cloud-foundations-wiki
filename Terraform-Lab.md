@@ -49,11 +49,7 @@ The second is the instance type.  Note that we are also giving it a tag so that 
 Let's see how to install and apply the Terraform files so that we can create an EC2 resource via Terraform.
 Here are the steps to take:
 
-1. Navigate to IAM Users > CloudLearner.
-1. Navigate to the Security Credentials tab and click on the Create access key button (if you don’t have it already with you). 
-1. Download and save the generated file on your laptop. This file contains secret access keys for your CloudLearner user. 
-1. Make sure you have removed the IAM role from your Public EC2 instance. 
-1. On the Public EC2 instance, configure your credentials for AWS CLI. Execute: 
+1. On your Public EC2 instance, configure your credentials for AWS CLI. Execute: 
 
 
 ```console
