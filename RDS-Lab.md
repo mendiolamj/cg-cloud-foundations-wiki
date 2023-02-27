@@ -10,7 +10,7 @@ When you [click here](https://console.aws.amazon.com/console/home?region=us-east
 _In this step, we will use Amazon RDS to create a MySQL DB Instance with db.t2.micro DB instance class, 20 GB of storage, and automated backups enabled with a retention period of one day. As a reminder, all of this is free tier eligible._
 
 1. In the top right corner of the Amazon RDS console, select the Region in which you want to create the DB instance. (Please use us-west-2)
-2. In the Create database section, choose Create database.
+2. In the Create database section, choose Create database.  Choose the Easy Create option.
 3. You now have options to select your engine.  For this tutorial, click the MySQL icon, leave the default value of edition and engine version, and 
    select the Free Tier template.
 4. You will now configure your DB instance. The list below shows the example settings you can use for this lab:
