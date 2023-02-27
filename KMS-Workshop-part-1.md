@@ -70,6 +70,8 @@ We can add the needed permissions via the CLI or the AWS console. We will use th
 
 Logging into the AWS console, [click here](https://console.aws.amazon.com/?nc2=h_m_mc), and navigate to the IAM service. Then click on "**Roles**", left area of the screen.
 ![alt text](/res/S1F1%20IAM.png)
+
+
 <**Figure-1**>
 
 
@@ -130,7 +132,7 @@ Select the policy and click the "Attach policy" button at botton right of the pa
 
 ### Step 3 - Create the key  - again - and set an alias
 
-Run the aws kms create-key command again and this time you will get the result from the creation of the key as a JSON block with the metadata of the key. See example below:
+Run the aws kms create-key command you should see the result from the creation of the key as a JSON block with the metadata of the key. See example below:
 
 ```
 $ aws kms create-key
