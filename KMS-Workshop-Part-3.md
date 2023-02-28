@@ -243,9 +243,6 @@ arn:aws:iam::ACCOUNT-ID-WITHOUT-HYPHENS:role/ROLE-NAME
 Copy the account Id and write it down, we are going to use it now. 
 
 
-![alt text](/res/S3F5.png)
-<**Figure-5**>
-
 
 Go back to the left column click "**Encryption Keys**". 
 Identify our CMK whose Alias is "**Imported CMK**" and click on it. You will land on a page with more details about the key itself. Scroll down until you see "**Key Policy**".
