@@ -246,17 +246,14 @@ $ aws kms import-key-material --key-id your-key-id --encrypted-key-material file
 
 **NOTE:** Depending when you follow this workshop you might need to adjust the time in "**KEY_MATERIAL_EXPIRES --valid-to**" as it can not be more than 365 days from the current date.
 
-We might want to set an alias for this new key as well. We will use the alias "**ImportedCMK**". The command is the same as we used in previous section. Remember to replace "**external-key-id**" with the actual KeyId you obtain in Step-1 when creating a CMK with external origin:
+We might want to set an alias for this new key as well. We will use the alias "**ImportedCMK<YourName>**". The command is the same as we used in previous section. Remember to replace "**external-key-id**" with the actual KeyId you obtain in Step-1 when creating a CMK with `external` origin:
 
 ```
 $ aws kms create-alias --alias-name alias/ImportedCMK --target-key-id 'external-key-id'
 ```
 
-If you go back into the AWS console, browse to the IAM service and select "**Encryption Keys**" to open the KMS console. Remember to make sure you have selected the right region (picture below- upper orange bounding box). The new imported key with its alias is shown and it is ready to use.
+If you go back into KMS, the new imported key with its alias is shown and it is ready to use.
 
-![Figure-11](/res/S1F11.png)
-
-<**Figure-11**>
 
 You also have the option to display into the AWS CLI the ids and aliases of your keys with the command "**aws kms list-aliases**". The JSON output will display the keys we have created and its alias, along with the aws service CMKs created by default for some of the services. 
 
