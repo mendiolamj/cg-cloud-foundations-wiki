@@ -2,7 +2,7 @@
 First off, go ahead and launch a new EC2 instance using the default VPC - and you do not need to create a new security group.
 
 
-Then, attach the IAM role to an EC2 instance that you either have running or create a new one.
+Then, attach the `KMSWorkshop-InstanceInitRole` IAM role to an EC2 instance that you either have running or create a new one.
 
 <img width="985" alt="Screen Shot 2023-02-27 at 10 51 46 AM" src="https://user-images.githubusercontent.com/25653204/221612317-53af5737-c0ac-474a-93a5-d50de5c63dd0.png">
 
