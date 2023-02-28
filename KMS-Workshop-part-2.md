@@ -48,38 +48,20 @@ $ sudo echo "Sample Secret Text to Encrypt" > samplesecret.txt
 
 ### Step 2- Generate the data key
 
-Next, we ask AWS KMS to generate a data key referencing a CMK. The CMK is referenced to encrypt the data key.  We will use the CMK created with our key material, this is the material we imported, key alias is "**ImportedCMK**". Use the following command to generate a symmetric data key with 256 bits length encrypted with our CMK.
+Next, we ask AWS KMS to generate a data key referencing a CMK. The CMK is referenced to encrypt the data key.  We will use the CMK created with our key material, this is the material we imported, key alias is "**ImportedCMK**".  Note that you will have to change the alias to match what you used.
+
+ Use the following command to generate a symmetric data key with 256 bits length encrypted with our CMK.
 ```
 $ aws kms generate-data-key --key-id alias/ImportedCMK --key-spec AES_256 --encryption-context project=workshop
 ```
-You will notice that the command will fail to run. Our current Role with Power User permissions does not have enough privileges to generate a data key. As per least privilege best practices, we are providing permissions as needed in policies attached to the role that can be easily tracked and detached when such permission for that user is not needed any more.
-
-We need to provide with permission to generate a data key. 
-
-The process is the same as we have seen twice in the previous section of the workshop, please go back to it if you need to in the following link: "[Create the import material and encrypt it for the import](https://github.com/aws-samples/aws-kms-workshop/blob/master/Section-1-Operating-with-AWS-KMS.md#step-4---import-your-key-material)"
-
-Basically, you need to go back to the AWS console, in the services area navigate to IAM and go to "**Policies**". We are going to create a new policy and attach it to the Power user role.
-
-As we did in the previous section, click on new "**Create Policy**", Select KMS as the service, go to the Actions area.
-In the "Write" section, select "**GenerateDataKey**" operation. Additionally select "**Encrypt**", "**Decrypt**" and the tagging operations **as you can see in image below**, we will need them for the nexts steps. and "**Any**" as resource. 
-
-![alt text](/res/S2F16.png)
-
-<**Figure-1**>
 
 
-
-
-Click on "**Review Policy**" and then give the policy a name, for example "**KMSWorkshop-AdditionalPermissions**".
-
-You can click now in "**Create Policy**". Once created, attach it to the role **KMSWorkshop-InstanceInitRole**.
-
-Once the policy is attached, if you try the same command again, it will succeed now. The command will return a JSON output  with:
+The command will return a JSON output  with:
 * the plaintext data key - Plaintext key in b64 encoding
 * the KeyId used to encrypt plaintext data key
 * A CiphertextBlob which is the encrypted data key generated, in base64 enconding. 
 
-Write these values down, we are going to needed them shortly.
+Write these values down, we are going to need them shortly.
 
 ```
 $ aws kms generate-data-key --key-id alias/ImportedCMK --key-spec AES_256 --encryption-context project=workshop
@@ -211,7 +193,7 @@ We start by going into the AWS console. Navigate to Amazon EC2 service. Look in 
 
 <**Figure-2**>
 
-Now in the upper area, you can click on "**Create Volume**" to create a new Amazon EBS disk. Once in the volume creation screen, and for the workshorp, you can leave the defaults in most fields- Except for the following: Ensure you have selected the same "**Availability zone**" as your EC2 instance is running on (It is easy to find out: you can look into the EC2 service, Instances area in the left pane, select your instance and locate the information "Availability Zone" below). The disk can only be attached to instances in the same availability zone.
+Now in the upper area, you can click on "**Create Volume**" to create a new Amazon EBS disk. Once in the volume creation screen, and for the workshop, you can leave the defaults in most fields- Except for the following: Ensure you have selected the same "**Availability zone**" as your EC2 instance is running on (It is easy to find out: you can look into the EC2 service, Instances area in the left pane, select your instance and locate the information "Availability Zone" below). The disk can only be attached to instances in the same availability zone.
 
 Ensure also that you have clicked the "**Encryption**" checkbox. Then select the CMK you want to use from AWS KMS. Let's select the CMK that we have imported with our own key material, the alias was: **ImportedCMK**.
 
