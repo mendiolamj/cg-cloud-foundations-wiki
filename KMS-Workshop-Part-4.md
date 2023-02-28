@@ -34,8 +34,6 @@ To establish a filter, go to filter area, select "**Event name**", and set the n
 
 You will have a display of the GenerateDataKey operations that you have performed during the workshop. You can see image below as a reference:
 
-![alt text](/res/S4F1.png)
-<**Figure-1**>
 
 If you open any of the request in the list,  you will have further details of the operation that took place and. For example, take a look at the "**User name**" value responsible for the requests and write it down, we will use it later. These parameters provide us with a full view of who, what, how and when an operation took place.
 
@@ -46,10 +44,6 @@ Another useful parameter is the "**AWS Access Key**". With it, you can filter by
 
 Now let's try to set up a new filter by "**User Name**" attribute. For the attribute value, use the same "**User name**" that you have obtained in one of the request listed when you filtered by "**GenerateDataKey**" Event name. 
 You should obtain a full list of AWS KMS operations performed by the user. Also other logged operations in other services, if the user has made any. An example in figure below:
-
-
-![alt text](/res/S4F15.png)
-<**Figure-2**>
 
 
 You can filter by many other parameters to collect all needed information to audit AWS KMS usage. A list of AWS KMS events that can be displayed in CloudTrail can be checked in this part of the [AWS KMS Documentation](https://docs.aws.amazon.com/kms/latest/developerguide/logging-using-cloudtrail.html).
@@ -76,15 +70,10 @@ With this, navigate to now to Amazon CloudWatch service in the AWS console.
 Inside Amazon CloudWatch, look in the right pane and click on "**Events**".
 Leave "**Event Pattern**" clicked and select "**Events by Service**" in the "**Build event pattern to match...**" area.
 
-![alt text](/res/S4F2.png)
-<**Figure-3**>
 
 
 Select "**Service Name**" as "**CloudTrail**" and "**Event Type**"  as "**AWS API Call via CloudTrail**".
 Then select "**Specific operation(s)**" and in the blank space, type the event name we are pursuing: "**GenerateDataKey**".
-
-![alt text](/res/S4F3.png)
-<**Figure-4**>
 
 
 Now press the "**+**" symbol to aggregate it to then event source filter. We have the input part ready, now let's do the target part. 
@@ -112,8 +101,6 @@ With Amazon Cloudwatch you can create alarms and dashboards that will give you c
 To check these metrics into Amazon CloudWatch navigate again into Amazon CloudWatch and select "**Metrics**" on the right pane.
 Inside metrics, find the ones that belong to AWS KMS:
 
-![alt text](/res/S4F4.png)
-<**Figure-4**>
 
 If you click through it you will find the metric "**SecondsUntilKeyMaterialExpiration**" for your CMK built with imported  key material. 
 With this metric you can now build an alarm into CloudWatch to warn you about the expiration of the key material for example. 
