@@ -92,10 +92,10 @@ Please change it for your corresponding KeyId value when applicable.
 
 The ARN of the key and its status ("Enabled", "Disabled") are highly relevant too. Other type of information is displayed. For example: the Account Id where the key belongs to. Another relevant piece of information is the the target key usage, this is: encrypt and decrypt in this case. 
 
-If you go back to the AWS console and navigate to the IAM service. Click in the left area to the bottom, "Encryption Keys", the key you have just created is already listed there. **Important: Remember to select the right Region in the KMS screen**. However, as we used the create-key command without parameters, it does not contain any alias to display and looks like its alias is empty. See image below the region selection and the blank alias name.
+If you go back to the AWS console and navigate to the KMS service you will see a list of keys.  However, as we used the create-key command without parameters, it does not contain any alias to display and looks like its alias is empty. 
 
+<img width="1187" alt="Screen Shot 2023-02-28 at 7 05 54 AM" src="https://user-images.githubusercontent.com/25653204/221850025-7a8300d1-a0fd-449f-a20d-4d5325cb80eb.png">
 
-<img width="1331" alt="Screen Shot 2023-02-27 at 1 34 55 PM" src="https://user-images.githubusercontent.com/25653204/221652648-98355aff-7c1c-4d83-8cbd-31440f255e12.png">
 
 
 Key aliases are very useful. They are easier to remember when operating with keys. Most importantly, when rotation keys, as we will see later in this section, we will not have to update our code to update the new KeyIDs or ARN references. By using alias in our code to call the CMKs by them, and updating the alias CMKs to point to the newly generated key, the amount of change in our code gets minimized.
