@@ -147,7 +147,9 @@ Let's go through to the steps in depth:
 
 The first step to do so is to issue the same create-key command but indicating the origin is external - this is, the key material will not come from AWS KMS, but from an external source
 
+``` bash
 $ aws kms create-key --origin EXTERNAL
+```
 
 ```
 {
@@ -164,7 +166,6 @@ $ aws kms create-key --origin EXTERNAL
         "AWSAccountId": "your-account-id"
     }
 ```
-
 
 The key metadata response we have to the command is similar to the previous key generation. Note, however, the "Enabled" field shows "false" this time and the "KeyState" is indicating "PendingImport" instead of "Enabled". Basically we need to import our key material to have this CMK ready to use. The KeyId format is again a block of five sequences of numbers. Remenber to replace **<external-key-id>** by the actual value you obtained in previous command when it corresponds.
 
