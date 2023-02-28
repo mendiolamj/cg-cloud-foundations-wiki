@@ -100,9 +100,10 @@ If you go back to the AWS console and navigate to the KMS service you will see a
 
 Key aliases are very useful. They are easier to remember when operating with keys. Most importantly, when rotation keys, as we will see later in this section, we will not have to update our code to update the new KeyIDs or ARN references. By using alias in our code to call the CMKs by them, and updating the alias CMKs to point to the newly generated key, the amount of change in our code gets minimized.
 
-Let's create an alias, "**FirstCMK**",  with the command aws kms create-alias. 
+Let's create an alias, "**FirstCMK<YourFullName>**",  with the command aws kms create-alias. 
 Remember to replace 'your-key-id' with the value obtained from previous command (aws kms create-key).
 
+Please append your full name to the alias to ensure it's unique across all participants!
 
 ```
 $ aws kms create-alias --alias-name alias/FirstCMK --target-key-id 'your-key-id'
@@ -110,8 +111,8 @@ $ aws kms create-alias --alias-name alias/FirstCMK --target-key-id 'your-key-id'
 
 If you look now in the console, the CMK you just created displays now the right alias. 
 
-![Figure-5](/res/S1F5%20Alias.png)
-<**Figure-5**>
+<img width="1174" alt="Screen Shot 2023-02-28 at 7 15 18 AM" src="https://user-images.githubusercontent.com/25653204/221851815-531fa029-3833-4721-a860-4fbcdd70278e.png">
+
 
 
 When you create the CMK from the console, just by clicking the button "create key" there are other parameters you need to set like tags, key administrators and usage permissions. This steps will basically create a Key Policy and attach it to the key together with the tags you have set. 
