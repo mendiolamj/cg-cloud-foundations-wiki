@@ -83,12 +83,16 @@ wget https://usaa-aws-resources.s3.amazonaws.com/tf-lab/main.tf
 
 ls 
 
+vi main.tf # change the region to us-west-2
+
 terraform init
 
 terraform validate
 
 terraform apply
 ```
+
+Be sure to update the region in the main.tf file to us-west-2 as well.
 
 The terraform init command initializes a working directory containing configuration files and installs plugins for required providers.  The plugin we need in this case is the AWS plugin.  
 
@@ -141,6 +145,8 @@ wget https://usaa-aws-resources.s3.amazonaws.com/tf-lab/02+-+with+input+%26+outp
 
 wget https://usaa-aws-resources.s3.amazonaws.com/tf-lab/03+-+with+tfvars/testing.tfvars 
 ```
+
+In the new main.tf file, update the region to `us-west-2`
 
 
 Take a look at the variables.tf file - you will see that this is where we define the variable:
