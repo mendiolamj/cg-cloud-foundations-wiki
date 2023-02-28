@@ -25,7 +25,7 @@ In this section we will create a CMK with key material coming from AWS KMS, and 
 
 ### Step 1 - create CMKs
 
-Time to get hands-on with KMS. **Connect to the instance created via terminal** to start working with the CMKs.
+Time to get hands-on with KMS. **Connect to your EC2 instance created via terminal** to start working with the CMKs.
 
 In order to create our first CMK, we will use the [AWS CLI](https://aws.amazon.com/cli/) in the instance. We will use it, instead of the AWS console, beacuse it will provide you with deeper insights and understanding of the process. Once you understand it, creating CMKs from the console will be a breeze.
 
