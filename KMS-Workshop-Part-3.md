@@ -26,7 +26,7 @@ Make the new directory and install the needed boto3 python library (if not prese
 
 ```
 $ sudo mkdir SampleWebApp
-$ sudo pip install boto3
+$ sudo pip3 install boto3
 ```
 
 Now, get into the directory and download the sample WebApp with wget as stated below:
