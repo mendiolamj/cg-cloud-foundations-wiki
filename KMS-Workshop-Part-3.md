@@ -321,7 +321,7 @@ For information on the command, please use [this section of the AWS KMS document
 
 
 
-This section of the Workshop is now completed. Please, navigate to [the next Section, Monitoring AWS KMS](https://github.com/aws-samples/aws-kms-workshop/blob/master/Section-4-Monitoring-AWS-KMS.md).
+This section of the Workshop is now completed. Please, navigate to [the next Section, Monitoring AWS KMS](https://github.com/varoonsahgal/cg-cloud-foundations/wiki/KMS-Workshop-Part-4).
 
 
 
