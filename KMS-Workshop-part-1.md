@@ -241,65 +241,10 @@ Also note the expiration date we have provided for the key material. On that dat
 As usual, replace "**your-key-id**", with the real **KeyId** of the key generated in Step 1 above for external origin.
 
 ```
-$ aws kms import-key-material --key-id your-key-id --encrypted-key-material fileb://WrappedKeyMaterial.bin --import-token fileb://token.bin --expiration-model KEY_MATERIAL_EXPIRES --valid-to 2021-02-01T12:00:00-08:00
-```
-
-All going well, the above command must have failed with the following error message:
-
-```
-when calling the ImportKeyMaterial operation: User: arn:aws:sts:::assumed-role/is not authorized to perform: kms:ImportKeyMaterial on resource: arn:aws:kms:eu-west-1:account-id:key/key-id
-```
-As you can read in the error message, even though our instance has a "Power user" role, it is still missing some capabilities. We are following Least Privilege practices, therefore we are only providing the role the permissions it needs. In this case, we need to provide it with access to the "**ImportKeyMaterial**" operation.
-
-We need to go back to the IAM service into the AWS console and add this permission to the role we are working with "**KMSWorkshop-InstanceInitRole**".  
-Go back to the console, navigate to the IAM service. Look and click on the left column, the  "**Policies**" section. Then hit "**Create Policy**" button. Search and select for the service "KMS" among all displayed on the screen. You will land in  the policy creator/editor for KMS, as in image below: 
-
-
-![Figure-6](/res/S1F6%20KMSPolicy.png)
-
-<**Figure-6**>
-
-
-Scroll down a little bit, and in the "**Actions**" section, go to "**Access Level**", within "**Write**" section,  and select "**ImportKeyMaterial**" , like it is seen in the image below:
-
-
-![Figure-7](/res/S1F7%20KMSImport.png)
-
-<**Figure-7**>
-
-
-Finally, select resources "**Any**" and click "**Review Policy**". 
-
-![Figure-8](/res/S1F8%20KMSResources.png)
-
-<**Figure-8**>
-
-In this step, give the policy a name, for example "**KMS-Workshop-ImportMaterialPermissions**" and hit "**Create Policy**".
- 
-With this, go back to the "**Roles**" section again (left side of the console within IAM service).
-Search again for "**KMS**" to find the role **KMSWorkshop-InstanceInitRole**, as we did in the second step when creating a CMK with no import material. Click on it.
-
-To attach the new policy we have just created to the role. Hit the button "**Attach policies**". 
-
-![Figure-9](/res/S1F9%20KMSARole.png)
-<**Figure-9**>
- 
- 
-A new screen will appear. Search for the policy we created by "**KMS**", you should find its name "**KMS-Workshop-ImportMaterialPermissions**", As you can see in image below. Then select it and hit the "**Attach Policy**" button.
-The Role now has permissions to import the key material.
-
- 
-![Figure-10](/res/S1F10%20KMSApolicy.png)
-<**Figure-10**>
-
-
-Let's try now the command again, this time it will succeed. We have successfully imported our key into AWS KMS. 
-```
-$ aws kms import-key-material --key-id your-key-id --encrypted-key-material fileb://WrappedKeyMaterial.bin --import-token fileb://token.bin --expiration-model KEY_MATERIAL_EXPIRES --valid-to 2019-09-01T12:00:00-08:00
+$ aws kms import-key-material --key-id your-key-id --encrypted-key-material fileb://WrappedKeyMaterial.bin --import-token fileb://token.bin --expiration-model KEY_MATERIAL_EXPIRES --valid-to 2024-02-01T12:00:00-08:00
 ```
 
 **NOTE:** Depending when you follow this workshop you might need to adjust the time in "**KEY_MATERIAL_EXPIRES --valid-to**" as it can not be more than 365 days from the current date.
-
 
 We might want to set an alias for this new key as well. We will use the alias "**ImportedCMK**". The command is the same as we used in previous section. Remember to replace "**external-key-id**" with the actual KeyId you obtain in Step-1 when creating a CMK with external origin:
 
