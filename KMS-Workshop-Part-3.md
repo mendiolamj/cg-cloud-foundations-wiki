@@ -3,12 +3,12 @@
 In this section, using a Web App, we are going to implement best practices for AWS KMS.
 These best practices are based on the Whitepaper "**[AWS Key Management Service Best Practices](https://d0.awsstatic.com/whitepapers/aws-kms-best-practices.pdf)**"
 
-this section has the following parts:
-* [Installing the Web App](https://github.com/aws-samples/aws-kms-workshop/blob/master/Section-3-Working-with-Web-App.md#installing-the-web-app)
-* [Adding Encryption to the Web App](https://github.com/aws-samples/aws-kms-workshop/blob/master/Section-3-Working-with-Web-App.md#adding-encryption-to-the-web-app)
-* [Working with Key Policies](https://github.com/aws-samples/aws-kms-workshop/blob/master/Section-3-Working-with-Web-App.md#working-with-key-policies)
-* [Key Policies and VPC Private Endpoint](https://github.com/aws-samples/aws-kms-workshop/blob/master/Section-3-Working-with-Web-App.md#vpc-endpoints-and-key-policies)
-* [AWS KMS key tagging](https://github.com/aws-samples/aws-kms-workshop/blob/master/Section-3-Working-with-Web-App.md#key-tagging)
+This section has the following parts:
+* Installing the Web App
+* Adding Encryption to the Web App
+* Working with Key Policies
+* Key Policies and VPC Private Endpoint
+* AWS KMS key tagging
 ---
 
 ### Installing the Web App
