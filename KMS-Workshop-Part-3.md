@@ -33,7 +33,7 @@ Now, get into the directory and download the sample WebApp with wget as stated b
 
 ```
 $ cd SampleWebApp
-$ sudo wget  https://raw.githubusercontent.com/aws-samples/aws-kms-workshop/master/WebApp.py
+$ sudo wget  https://raw.githubusercontent.com/varoonsahgal/cg-cloud-foundations/main/kms/WebApp.py
 ```
 
 You have downloaded a python application, named "**WebApp.py**", that will be our test Web App.
