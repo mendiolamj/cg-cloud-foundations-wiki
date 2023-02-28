@@ -140,11 +140,8 @@ You may also use the AWS CLI commands. In first section of the document, you lea
 	
 2. Detach the Role from the EC2 instance. You need to follow the same procedure you used to attach it. If you need to refresh it, go back to the first section of the workshop, in the "Getting things ready to kick-off" section.
 
-3. Still on the AWS Console, navigate to the IAM service again and select "**Roles**" on the left pane. Locate the Role we have been working on all the workshop: "**KMSWorkshop-InstanceInitRole**" and detach from it all the customer policies that we have created. To do it, one you are in the "**KMSWorkshop-InstanceInitRole**" Role screen, click on the black "x" on the right side of the policy listing.
 	
-4. Now you can terminate the EC2 instance. The process is very simple, just select the instance in the EC2 service within the AWS Console and in "**Actions**" select "**Terminate Instance**".
-	
-5. The final step is to delete the CloudFormation Stack that we had launched at the beginning of the workshop. To do it, just go back to the CloudFormation service again within the AWS Console. In the "**Stacks**" menu, select the stack used to launch the workshop and in the "**Actions**" button, click on "**Delete Stack**"
+3. Now you can terminate the EC2 instance. The process is very simple, just select the instance in the EC2 service within the AWS Console and in "**Actions**" select "**Terminate Instance**".
 
 
 All the resources should now have been deleted from your account, with the exception of the CMKs, they will not be deleted until the scheduled delete date is met.
