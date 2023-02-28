@@ -77,18 +77,6 @@ Let's use the console. Open the AWS Console. Navigate to IAM service, left colum
 
 Within the role, locate the policy we attached when working in the second section of the workshop, we named it "**KMSWorkshop-AditionalPermissions**". Click the button "**Edit Policy**". Expand the Actions-Access Level-Write section and remove the check box on "**Decrypt**". Review policy and save it.
 
-Let's run the server once more. Please remember you need the KeyID again:
-
-```
-$ sudo python WebAppEncSSE.py 80
-```
-
-Now try to upload a new file to S3. It will succeed it. Now try and download it. You can also try to download the previous text file we created "SampleFile-KMS.txt". Both operations will fail, and the logs on your instance display show have something like:
-
-```
-"ClientError: An error occurred (AccessDenied) when calling the GetObject operation: Access Denied"
-```
-**NOTE: **  "kms:Encrypt" needs also the capability to generate data keys if it is meant to be used though AWS services (envelope encryption!) This is important when fine-graining key policies.
 
 #### Least Privilege - Access only from the account
 
