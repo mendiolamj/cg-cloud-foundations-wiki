@@ -196,9 +196,6 @@ Now in the upper area, you can click on "**Create Volume**" to create a new Amaz
 
 Ensure also that you have clicked the "**Encryption**" checkbox. Then select the CMK you want to use from AWS KMS. Let's select the CMK that we have imported with our own key material, the alias was: **ImportedCMK**.
 
-![alt text](/res/S2F3.png)
-
-<**Figure-3**>
 
 Create a tag for the volume, for example a key-pair like: **Name: WorkshopEBS**.
 Click on "**Create volume**" at the right bottom of the screen. The volume will start being created and will be ready to be attached to the instance in a few seconds. 
