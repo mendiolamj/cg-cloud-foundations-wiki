@@ -9,6 +9,10 @@ As a baseline, in AWS KMS you may want to monitor:
 
 To monitor that activity we will use the AWS service [AWS CloudTrail](https://aws.amazon.com/cloudtrail/) and [Amazon CloudWatch](https://aws.amazon.com/cloudwatch/), especially its logs, events and alarms.
 
+
+<img width="1581" alt="Screen Shot 2023-02-28 at 2 14 02 PM" src="https://user-images.githubusercontent.com/25653204/221955774-180366a5-f0de-43ec-8dda-f26f791b73ea.png">
+
+
 ---
 ### AWS KMS and AWS CloudTrail
 
