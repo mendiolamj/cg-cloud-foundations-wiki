@@ -19,9 +19,9 @@ AWS KMS is able to encrypt and decrypt up to 4 kilobytes (4096 bytes) of data. W
 Envelope encryption refers to the practice of protecting the data by encrypting it with a data key, and encrypting the data key itself with another encryption key, a CMK under KMS in this case.
 See the following figure from [AWS KMS documentation](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#enveloping).
 
-![alt text](/res/S2F1.png)
 
-<**Figure-1**>
+<img width="1002" alt="Screen Shot 2023-02-28 at 8 47 25 AM" src="https://user-images.githubusercontent.com/25653204/221872759-5b378d12-ebd4-42f9-a97c-0d65f6dbff14.png">
+
 
 
 AWS KMS is also capable of generating **data keys** to encrypt data from CMKs. 
