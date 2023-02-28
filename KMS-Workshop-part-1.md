@@ -32,13 +32,13 @@ In order to create our first CMK, we will use the [AWS CLI](https://aws.amazon.c
 To use the AWS CLI you might need to configure your region in AWS CLI first. You can do so typing the command "**aws configure**" in the instance once you are connected via terminal. 
 Leave all fields blank except for the default region. Choose the code of the region you are working in ([region codes](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-available-regions)) and set it as default region in AWS CLI. 
 
-See an example below setting up Ireland as the default region in AWS CLI:
+See an example below setting up us-west2 as the default region in AWS CLI:
 
 ```
 [ec2-user@ip-10-0-X-X ~]$ aws configure
 AWS Access Key ID [None]: 
 AWS Secret Access Key [None]: 
-Default region name [None]: eu-west-1
+Default region name [None]: us-west-2
 Default output format [None]: 
 [ec2-user@ip-10-0-X-X ~]$ 
 ```
