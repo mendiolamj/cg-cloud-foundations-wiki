@@ -32,7 +32,7 @@ Go back to the AWS console in your browser, navigate to "**CloudTrail**" service
 
 To establish a filter, go to filter area, select "**Event name**", and set the name as "**GenerateDataKey**". Press "**Enter**" while still on the "**Enter Event Name**", leaving "**Select time range**" as it is. Alternatively, you could select a time range if you wish.
 
-You will have a display of the GenerateDataKey operations that you have performed during the workshop. You can see image below as a reference:
+You will have a display of the GenerateDataKey operations that you have performed during the workshop. 
 
 
 If you open any of the request in the list,  you will have further details of the operation that took place and. For example, take a look at the "**User name**" value responsible for the requests and write it down, we will use it later. These parameters provide us with a full view of who, what, how and when an operation took place.
@@ -43,7 +43,7 @@ The filter parameter "**User name**" allows you to filter by the identity of the
 Another useful parameter is the "**AWS Access Key**". With it, you can filter by the AWS access key ID that was used to sign the request. If the request was made with temporary credentials, the access key ID of the temporary credential is what will show up as the access key.
 
 Now let's try to set up a new filter by "**User Name**" attribute. For the attribute value, use the same "**User name**" that you have obtained in one of the request listed when you filtered by "**GenerateDataKey**" Event name. 
-You should obtain a full list of AWS KMS operations performed by the user. Also other logged operations in other services, if the user has made any. An example in figure below:
+You should obtain a full list of AWS KMS operations performed by the user. Also other logged operations in other services, if the user has made any. 
 
 
 You can filter by many other parameters to collect all needed information to audit AWS KMS usage. A list of AWS KMS events that can be displayed in CloudTrail can be checked in this part of the [AWS KMS Documentation](https://docs.aws.amazon.com/kms/latest/developerguide/logging-using-cloudtrail.html).
