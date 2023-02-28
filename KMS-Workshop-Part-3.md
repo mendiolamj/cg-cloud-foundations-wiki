@@ -58,14 +58,9 @@ Go to your browser now and navigate to the Web App in the IP you obtained in the
 
 **Note:** if you run into issues with reaching the server, it may be worthy to recheck the security group associated with the server, ensure HTTP traffic is allowed. Use [this link to the Security Groups documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-network-security.html). 
 
-![alt text](/res/S3F1.png)
-<**Figure-1**>
-
 The WebApp has the file uploader, a browser of present objects in our S3 bucket and the local files.
 In your laptop create a text file with a sample text, and provide it a name like "**SampleFile-KMS.txt**"
 Upload it through the WebApp.
-
-
 
 
 You should get to a page informing that the operation was successul. 
@@ -143,8 +138,6 @@ Once the server is running on port 80, go back again into your laptop's browser 
 If the upload is successful, let's check that the file was in fact encrypted. We will use the AWS console.
 Open the AWS console. Navigate to the Amazon S3 service and locate our working bucket "**kmsworkshop-accountid**".  The file you have just uploaded will be there.  Click on its name to open its properties.
 
-![alt text](/res/S3F3.png)
-<**Figure-3**>
 
 
 As you can see, the files metadata specifies that is under Server Side Encryption and displays the ARN of the KMS key used to encrypt. Any accidental access to the bucket now will not be able to display the contents of the file, as they are encrypted.
