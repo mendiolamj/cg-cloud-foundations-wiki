@@ -188,8 +188,8 @@ For the workshop, let's see an example of attaching a disk to our working instan
 
 We start by going into the AWS console. Navigate to Amazon EC2 service. Look in the left pane. Locate "**Elastic Block Store**" and click on "**Volumes**".
 
+<img width="1485" alt="Screen Shot 2023-02-28 at 9 02 57 AM" src="https://user-images.githubusercontent.com/25653204/221876726-019b67b3-86de-4a78-883b-69263cd662e2.png">
 
-<img width="1221" alt="Screen Shot 2023-02-27 at 4 42 37 PM" src="https://user-images.githubusercontent.com/25653204/221876405-56d6c1c4-e915-4bc0-bd42-de5f0272728a.png">
 
 
 Now in the upper area, you can click on "**Create Volume**" to create a new Amazon EBS disk. Once in the volume creation screen, and for the workshop, you can leave the defaults in most fields- Except for the following: Ensure you have selected the same "**Availability zone**" as your EC2 instance is running on (It is easy to find out: you can look into the EC2 service, Instances area in the left pane, select your instance and locate the information "Availability Zone" below). The disk can only be attached to instances in the same availability zone.
