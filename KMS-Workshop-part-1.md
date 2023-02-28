@@ -323,9 +323,6 @@ It turns out that the role our instance uses does not have permissions to update
 
 At this point of the workshop you should be able to do it with no issues. One tip: Update aliases, enable and disable key and delete operation are part of the Write operations of AWS KMS. See image below.
 
-![Figure-16](/res/S1F16.png)
-
-<**Figure-16**>
 
 
 For resources select both "**alias**" and "**key**". You can name the policy "**KMSWorkshop-RotationDisableOps**". 
