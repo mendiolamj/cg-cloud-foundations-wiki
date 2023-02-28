@@ -15,7 +15,7 @@ This section has the following parts:
 
 The Web App is very simple python web server that works as a shared file server, for internal employees for example. It allows to upload and download files to/from  S3. For downloads the Web App keeps a local file in the instance where Web App is running, prefixing the file with "localfile-". Remenber, our instance has a role with a policy attached to it that allow to read/write from S3.
 
-Let's make a working directory for a our sample Web App and install the boto3 AWS Pyhon library library: Check we are in our home directory first.
+Let's make a working directory for a our sample Web App and install the boto3 AWS Python library library: Check we are in our home directory first.
 
 ```
 $ pwd
