@@ -4,7 +4,7 @@ https://docs.aws.amazon.com/codebuild/latest/userguide/getting-started.html
 
 Some notes:
 
-1. Be sure to save the files before you zip them.
+1. Be sure to save the files that you create before you zip them.
 
 1. In step 4, the command to zip your files is:
 1. `zip -r MessageUtil.zip  buildspec.yml pom.xml src/`
