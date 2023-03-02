@@ -18,12 +18,13 @@ cd dynamo-lab
 aws sts get-caller-identity # you should see your role here
 
 wget https://usaa-aws-resources.s3.amazonaws.com/dynamodb-lab/create_table.py
-Change the name of the table to something unique and the region to us-west-2
+#Change the name of the table to something unique and the region to us-west-2
+#You can do nano create_table.py and then CTRL-X to save and quit
 
 wget https://usaa-aws-resources.s3.amazonaws.com/dynamodb-lab/items.json
 
 wget https://usaa-aws-resources.s3.amazonaws.com/dynamodb-lab/bulk_load_table.py
-Change the name of the table to something unique and the region to us-west-2
+#Change the name of the table to something unique and the region to us-west-2
 
 ```
 
