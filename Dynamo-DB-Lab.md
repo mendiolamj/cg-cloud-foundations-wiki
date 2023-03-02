@@ -6,7 +6,7 @@ Here's an overview of the lab:
 Here are the actual steps for the lab: 
 
 1. First, launch an EC2 instance using the default VPC.
-1. Create a new IAM role. Name it DDRole<YourNameHere>. 
+1. Create a new IAM role. Name it DDRole**YourNameHere** 
 1. It should be assumed by EC2. 
 1. Allocate it AmazonDynamoDBFullAccess policy.
 1. Allocate this IAM role to your Public EC2 instance. For this, select your public EC2 instance. Go to Actions > Security > Modify IAM Role. 
