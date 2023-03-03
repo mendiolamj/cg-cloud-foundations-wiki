@@ -9,3 +9,6 @@ Change the regions to us-west-2 and AZ's to 2a and 2c
 
 When creating a VPC endpoint, select 
 <img width="867" alt="Screen Shot 2023-03-03 at 7 11 26 AM" src="https://user-images.githubusercontent.com/25653204/222717030-4c508ee5-f21d-447c-9846-559868195ba0.png">
+
+
+<img width="947" alt="Screen Shot 2023-03-03 at 7 16 16 AM" src="https://user-images.githubusercontent.com/25653204/222717958-e30eaa68-f41f-49b6-8eef-ca3ef9f896cf.png">
