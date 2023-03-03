@@ -12,3 +12,13 @@ When creating a VPC endpoint, select
 
 
 <img width="947" alt="Screen Shot 2023-03-03 at 7 16 16 AM" src="https://user-images.githubusercontent.com/25653204/222717958-e30eaa68-f41f-49b6-8eef-ca3ef9f896cf.png">
+
+Run through this one:
+https://catalog.workshops.aws/general-immersionday/en-US/advanced-modules/compute/launching
+
+- when creating the ec2 instance, remember to add your name to make it unique
+- when using your own VPC for EC2, be sure to use the public subnet (not private!)
+- For the security group name and description, you can just put in "your initials - web server"
+- be sure to select auto-assign public IP
+- when creating the IAM Role - add your initials to `SSMInstanceProfile`
+
