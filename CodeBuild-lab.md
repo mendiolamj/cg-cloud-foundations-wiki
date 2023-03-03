@@ -12,3 +12,8 @@ Some notes:
 1. You can make your s3 buckets public - and please make them unique by adding your name to the bucket name.
 
 1. And for the codebuild project name, please add your name as well to make it unique from other students.
+
+
+Also, complete this lab as well:
+
+https://docs.aws.amazon.com/codebuild/latest/userguide/sample-build-badges.html
