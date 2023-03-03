@@ -145,3 +145,15 @@ _You can easily delete the MySQL DB Instance from the Amazon RDS console. It is 
 2. You are asked to create a final snapshot and to confirm the deletion. For our example, do not create a final snapshot, acknowledge that you want to delete the instance, and then click **Delete.** 
 
 _Note: Deleting your DB Instance may take a few minutes_
+
+
+
+***
+
+Note that after you launch an EC2 instance, you do have the option to connect it to RDS:
+
+<img width="1021" alt="Screen Shot 2023-03-03 at 7 51 51 AM" src="https://user-images.githubusercontent.com/25653204/222724868-6ee52ea5-e192-4cfd-b184-2f80da240248.png">
+
+
+
+
