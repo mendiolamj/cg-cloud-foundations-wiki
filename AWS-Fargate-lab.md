@@ -70,4 +70,7 @@ Basically, by splitting across multiple subnets, during an outage load can be sh
 On the next view, we're asked why type of cluster template we would like to use. As we're going to be using Fargate to deploy our application, we only need the simplest of clusters, so select "Networking Only" and then click "Next Step"
 
 
+After our cluster has been deployed, you'll be able to see it's managment page. At the moment, it's not doing very much at all, but now's the time where we put our container image to use.
+
+
 
