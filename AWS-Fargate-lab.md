@@ -47,9 +47,15 @@ Now that we're logged in, we can simply use docker push to upload our container 
 docker push <URI>
 ```
 
+You should then see the image uploaded in ECR:
 
+<img width="1176" alt="Screen Shot 2023-03-05 at 8 16 28 PM" src="https://user-images.githubusercontent.com/25653204/222998540-95720474-7a14-45a9-a848-13961041b8c6.png">
 
+## Creating a Cluster
 
+In order to deploy our container, we need a cluster of computers to run it on. This is where the Amazon Elastic Container Service comes in.
+
+Head to the [Amazon ECS Management Console ](https://console.aws.amazon.com/ecs/v2/clusters?region=us-west-2) and click "Create Cluster".
 
 
 
