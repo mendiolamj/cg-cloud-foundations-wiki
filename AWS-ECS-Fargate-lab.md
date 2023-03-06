@@ -103,11 +103,15 @@ Leave all the defaults alone on this page.  Go ahead and hit next and on the nex
 
 # Running our container
 
-Now that we have a Task, we can now launch it in our Cluster - note that it does not run by default. Back on the Clusters home page, select the Task tab so we can run our task.
+Now that we have a Task, we can now launch it in our Cluster - note that it does not run by default. Back on the Clusters home page, select the Task tab so we can run our task:
 
 
 
 <img width="1566" alt="Screen Shot 2023-03-06 at 9 53 58 AM" src="https://user-images.githubusercontent.com/25653204/223145758-ba7cdbb6-6416-48c9-8d9e-33a0ead413a7.png">
+
+In the next page, you can leave all the configuration options as their defaults. 
+
+Go ahead and click create on the bottom.
 
 
 ## Aside on terminology:
