@@ -58,4 +58,16 @@ In order to deploy our container, we need a cluster of computers to run it on. T
 Head to the [Amazon ECS Management Console ](https://console.aws.amazon.com/ecs/v2/clusters?region=us-west-2) and click "Create Cluster".
 
 
+Put in a name for the cluster - like "Group1-cluster"
+
+Under networking, go ahead and select the default VPC and select 2 subnets since we are just doing a training exercises (note that multiple subnets are for redundancy as they live in different availability zones).
+
+Basically, by splitting across multiple subnets, during an outage load can be shifted to launch containers entirely in other subnets (assuming they're in different AZs). This is generally encouraged for all services that support multiple availability zones:
+
+<img width="703" alt="Screen Shot 2023-03-05 at 9 24 52 PM" src="https://user-images.githubusercontent.com/25653204/223005273-d4f9240a-6645-43a5-a132-bcfda7786f46.png">
+
+
+On the next view, we're asked why type of cluster template we would like to use. As we're going to be using Fargate to deploy our application, we only need the simplest of clusters, so select "Networking Only" and then click "Next Step"
+
+
 
