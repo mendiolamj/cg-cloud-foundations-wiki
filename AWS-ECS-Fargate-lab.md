@@ -82,8 +82,29 @@ In the pop out menu to the left of the screen, select "Task Definitions" and whe
 <img width="1547" alt="Screen Shot 2023-03-06 at 9 18 41 AM" src="https://user-images.githubusercontent.com/25653204/223135640-55a9f0df-0afd-4b14-9a09-f2a21784cdc4.png">
 
 
-Enter in a Task definition family name such as group1_task. Next, set up the container details with a name such as moveit and use the Image URI of your ECR container. For port mappings, enter 80 as the value for our container port with the protocol set to TCP. This will enable us to communicate with our application on port 80.
+Enter in a Task definition family name such as group1_task. Next, set up the container details with a name such as group1container and use the Image URI of your ECR container. For port mappings, enter 80 as the value for our container port with the protocol set to TCP. This will enable us to communicate with our application on port 80.
 
-Finally open the environment variables tab and create a variable PORT with the value of 80. This will tell our application that it should listen for requests on that port, which makes sense as its the standard HTTP port. Click Next to continue to the next page.
+
+<img width="709" alt="Screen Shot 2023-03-06 at 9 39 14 AM" src="https://user-images.githubusercontent.com/25653204/223141800-6c69cc3b-f714-4b06-bd13-0bdf0277f963.png">
+
+
+Finally open the environment variables section and create a variable PORT with the value of 80. This will tell our application that it should listen for requests on that port, which makes sense as its the standard HTTP port:
+
+<img width="722" alt="Screen Shot 2023-03-06 at 9 42 38 AM" src="https://user-images.githubusercontent.com/25653204/223142719-7307f79a-ed04-4746-b2d8-f13cf361cea6.png">
+
+Go ahead and hit next.
+
+Here we can leave the majority of our configuration options as their defaults. For task size, go ahead and set the minimum values to get started: Task CPU set to 0.5 vCPU and Task Memory set to 1 GB:
+
+<img width="1003" alt="Screen Shot 2023-03-06 at 9 46 34 AM" src="https://user-images.githubusercontent.com/25653204/223143734-798147d0-0891-45c5-8a6b-067981b4b020.png">
+
+Leave all the defaults alone on this page.  Go ahead and hit next and on the next page hit Create.
+
+
+
+
+
+
+
 
 
