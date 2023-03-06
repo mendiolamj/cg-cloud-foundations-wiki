@@ -1,4 +1,4 @@
-# Uploading container image to ECR:
+# Creating a private repository:
 
 Be sure that Private is selected and click the orange button that says create repository:
 
@@ -15,4 +15,6 @@ Copy the URI to your clipboard and then head back to your CLI.  Of course, pleas
 
 
 <img width="1035" alt="Screen Shot 2023-03-05 at 7 49 13 PM" src="https://user-images.githubusercontent.com/25653204/222996703-dacdf3bc-a2ca-4f71-8629-e92832334d13.png">
+
+# Uploading container image to ECR:
 
