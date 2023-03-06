@@ -73,4 +73,17 @@ On the next view, we're asked why type of cluster template we would like to use.
 After our cluster has been deployed, you'll be able to see it's managment page. At the moment, it's not doing very much at all, but now's the time where we put our container image to use.
 
 
+## Creating a Task definition
+
+In order to get our container image deployed on our shiny new cluster, we need to create "Task Definition". A task definition is a way to specify the container information for your application, such as how many containers are part of our task, what resources they will use, how they are linked together, and which host ports they will have access to.
+
+In the pop out menu to the left of the screen, select "Task Definitions" and when the next view has loaded click "Create new Task Definition":
+
+<img width="1547" alt="Screen Shot 2023-03-06 at 9 18 41 AM" src="https://user-images.githubusercontent.com/25653204/223135640-55a9f0df-0afd-4b14-9a09-f2a21784cdc4.png">
+
+
+Enter in a Task definition family name such as group1_task. Next, set up the container details with a name such as moveit and use the Image URI of your ECR container. For port mappings, enter 80 as the value for our container port with the protocol set to TCP. This will enable us to communicate with our application on port 80.
+
+Finally open the environment variables tab and create a variable PORT with the value of 80. This will tell our application that it should listen for requests on that port, which makes sense as its the standard HTTP port. Click Next to continue to the next page.
+
 
