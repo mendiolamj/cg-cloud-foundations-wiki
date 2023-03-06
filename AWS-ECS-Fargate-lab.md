@@ -1,3 +1,9 @@
+# Overview
+We will take the Apache httpd Docker image and deploy it to the ECS.
+
+You can pull it to your VM if you don't already have it via `docker pull httpd`.  Then in the instructions below where we ask you to tag the image with the URI - use the httpd image you just pulled.
+
+
 # Creating a private repository:
 
 Navigate to the ECR service in the AWS console.
@@ -112,6 +118,9 @@ Now that we have a Task, we can now launch it in our Cluster - note that it does
 In the next page, you can leave all the configuration options as their defaults. 
 
 Go ahead and click create on the bottom.
+
+You'll be taken to an overview of our cluster, and in the table at the bottom you should see your new task in the "Tasks" table with the status of "Provisioning". It may take a moment or two for the container to provision. To check press the refresh button and wait until the status changes to "Running".
+
 
 
 
