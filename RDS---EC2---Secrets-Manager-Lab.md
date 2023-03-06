@@ -9,7 +9,7 @@ https://catalog.workshops.aws/general-immersionday/en-US/basic-modules/10-ec2/ec
 For secrets manager, go to this link: https://us-west-2.console.aws.amazon.com/secretsmanager/landing?region=us-west-2
 
 
-Choose one person in your breakout room to create the RDS instance (when you get to that point).  Then, to access RDS from EC2, you can have 
+Choose one person in your breakout room to create the RDS instance and the secret (when you get to that point).  Then, to access RDS from EC2, you can have 
 
 You can add the secrets manager policy to your IAM user yourself:
 
