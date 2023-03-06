@@ -20,4 +20,36 @@ Copy the URI to your clipboard and then head back to your CLI.  Of course, pleas
 
 # Uploading container image to ECR:
 
+To tell Docker where to save our container image, we can tag it with the URI we just required.
+
+Enter the following command into your CLI to tag your container image with our private ECR repository's URI (replace with the URI we just acquired):
+
+```code
+docker tag myimage <URI>
+```
+
+Now that we've tagged our image with it's ultimate destination, we need to give the Docker CLI tool limited access to our AWS account so that it can write our image to our repository.
+
+We can do so with the following command:
+
+```
+aws ecr get-login-password --region us-west-2 | docker login --username AWS --password-stdin <REGISTRY_URI>
+```
+
+Take note of the two fields we need to replace in the above command. We need to specify the region our ECR Repository is located in - `us-west-2`, and we need to replace <REGISTRY_URI> up to the last slash - for example -  `962804699607.dkr.ecr.us-west-2.amazonaws.com/varoon-ecr-repository` (please do not use that).
+
+
+If you entered the right parameters, you should see Login Succeeded in your terminal.
+
+Now that we're logged in, we can simply use docker push to upload our container image to our repository.
+
+```
+docker push <URI>
+```
+
+
+
+
+
+
 
