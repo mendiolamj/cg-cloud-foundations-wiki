@@ -110,7 +110,7 @@ Now that we have a Task, we can now launch it in our Cluster - note that it does
 <img width="1566" alt="Screen Shot 2023-03-06 at 9 53 58 AM" src="https://user-images.githubusercontent.com/25653204/223145758-ba7cdbb6-6416-48c9-8d9e-33a0ead413a7.png">
 
 
-## Aside on terminology (from stack overflow):
+## Aside on terminology:
 A Task Definition is a collection of 1 or more container configurations. Some Tasks may need only one container, while other Tasks may need 2 or more potentially linked containers running concurrently. The Task definition allows you to specify which Docker image to use, which ports to expose, how much CPU and memory to allot, how to collect logs, and define environment variables.
 
 A Task is created when you run a Task directly, which launches container(s) (defined in the task definition) until they are stopped or exit on their own, at which point they are not replaced automatically. Running Tasks directly is ideal for short-running jobs, perhaps as an example of things that were accomplished via CRON.
